@@ -1,4 +1,4 @@
-# Django settings for apchemhelp project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -82,8 +82,7 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'fmz1bxrae+i3$4+f-66j8dst#0#ae@^6b3ag501rd6c08rkc0m'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
