@@ -1,18 +1,22 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
+from django.views.generic import TemplateView
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'apchemhelp.views.home', name='home'),
-    # url(r'^apchemhelp/', include('apchemhelp.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
-    url(r'^home/', 'core.views.home'),
+    url(r'^$', TemplateView.as_view(template_name='index.html')),
+    url(r'^about/$', TemplateView.as_view(template_name='about.html')),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact.html')),
+    url(r'^license/$', TemplateView.as_view(template_name='license.html')),
+    url(r'^calculator/mass/$', TemplateView.as_view(template_name='MassCalc.htm')),
+    url(r'^calculator/titration/$', TemplateView.as_view(template_name='TitrationApp.htm')),
+    url(r'^formulas/thermo/$', TemplateView.as_view(template_name='FormulasThermo.htm')),
+    url(r'^formulas/kinetics/$', TemplateView.as_view(template_name='FormulasKin.htm')),
+    url(r'^formulas/gases/$', TemplateView.as_view(template_name='FormulasGas.htm')),
+    url(r'^formulas/equilibrium/$', TemplateView.as_view(template_name='FormulasEq.htm')),
+    url(r'^flashcard/thermo/$', TemplateView.as_view(template_name='FlashcardThermodynamics.htm')),
+    url(r'^flashcard/periodic/$', TemplateView.as_view(template_name='FlashcardPeriodicStructure.html')),
+    url(r'^flashcard/acidbase/$', TemplateView.as_view(template_name='FlashcardAcidBase.htm')),
 )
