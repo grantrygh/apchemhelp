@@ -12,7 +12,7 @@ Credit to Author: Yane Frenski for most of this CSS.
 .quizy-memorygame .mgcard-show{
   width:156px;
   height:156px;
-  background:url('Memory/css/img/mg-mcard.png');
+  background:url('../img/mg-mcard.png');
   padding: 6px;
 }
 
@@ -30,7 +30,7 @@ Credit to Author: Yane Frenski for most of this CSS.
 }
 
 .quizy-mg-item .quizy-mg-item-top{
-  background:url('Memory/css/img/quizy-mg-item-top.png');
+  background:url('../img/quizy-mg-item-top.png');
   max-width:100%;
   max-height:100%;
 }
@@ -48,11 +48,11 @@ Credit to Author: Yane Frenski for most of this CSS.
 }
 
 .quizy-mg-notification-fly-neg{
-  background:url('Memory/css/img/quizy-mg-notif-neg.png');
+  background:url('../img/quizy-mg-notif-neg.png');
 }
 
 .quizy-mg-notification-fly-pos{
-  background:url('Memory/css/img/quizy-mg-notif-pos.png');
+  background:url('../img/quizy-mg-notif-pos.png');
 }
 
 /* styles for the game summary */
@@ -85,15 +85,11 @@ Credit to Author: Yane Frenski for most of this CSS.
 #quizy-game-summary #gs-column2{
   font-size:12px;
   padding-top: 65px;
-  background:url('Memory/css/img/mg-timeicon.png') 75% 20% no-repeat;
+  background:url('../img/mg-timeicon.png') 75% 20% no-repeat;
 }
 
 #quizy-game-summary #gs-column3{
   font-size:12px;
   padding-top: 65px;
-  background:url('Memory/css/img/mg-clickicon.png') 75% 20% no-repeat;
-}
-
-body{
-  background-color: black;
+  background:url('../img/mg-clickicon.png') 75% 20% no-repeat;
 }

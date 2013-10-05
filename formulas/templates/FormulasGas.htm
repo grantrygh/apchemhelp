@@ -3,10 +3,10 @@
     <title>AP ChemHelp | Gas Formulas</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../bootstrap-examples-master/bootstrap-examples-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../bootstrap-examples-master/bootstrap-examples-master/offcanvas/offcanvas.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,12 +18,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><img src="../Home/logo2.png"></a>
+        <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="../Formulas/FormulasGas.htm">Gas Formulas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="../Home/about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="../Home/contact.html">Contact</a></li>
+            <li><a href="/">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+            <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -145,18 +145,18 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Titration</li>
-              <li class="active"><a href="../Titration/TitrationApp.htm">Titration Calculator</a></li>
+              <li class="active"><a href="/calculator/titration/">Titration Calculator</a></li>
               <li class="nav-header">Molecular</li>
-              <li><a href="../MassCalc/MassCalc.htm">Mass Calculator</a></li>
+              <li><a href="/calculator/mass/">Mass Calculator</a></li>
               <li class="nav-header">Concentration Game</li>
-              <li><a href="../Flashcard/FlashcardAcidBase.htm">Acids and Bases</a></li>
-              <li><a href="../Flashcard/FlashcardPeriodicStructure.html">Periodic Structure</a></li>
-              <li><a href="../Flashcard/FlashcardThermodynamics.htm">Thermodynamics</a></li>
+              <li><a href="/flashcard/acidbase/">Acids and Bases</a></li>
+              <li><a href="/flashcard/periodic/">Periodic Structure</a></li>
+              <li><a href="/flashcard/thermo/">Thermodynamics</a></li>
               <li class="nav-header">Formula Sheet</li>
-              <li><a href="../Formulas/FormulasGas.htm">Gases</a></li>
-              <li><a href="../Formulas/FormulasEq.htm">Equilibrium</a></li>
-              <li><a href="../Formulas/FormulasThermo.htm">Thermodynamics</a></li>
-              <li><a href="../Formulas/FormulasKin.htm">Kinetics</a></li>
+              <li><a href="/formulas/gases/">Gases</a></li>
+              <li><a href="/formulas/equilibrium/">Equilibrium</a></li>
+              <li><a href="/formulas/thermo/">Thermodynamics</a></li>
+              <li><a href="/formulas/kinetics/">Kinetics</a></li>
             </ul>
           </div><!--/.well -->
         </nav><!--/span-->
@@ -181,7 +181,7 @@ td {
     <!-- jQuery and plugin -->
     <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <script src="../bootstrap-examples-master/bootstrap-examples-master/assets/js/jquery.js"></script>
-    <script src="../bootstrap-examples-master/bootstrap-examples-master/offcanvas/offcanvas.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
   </body>
 </html>
