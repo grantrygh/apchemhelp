@@ -19,7 +19,22 @@ footer {
     color: gray;
     border-top: 3px solid rgb(245, 245, 245);  
     text-align: center;  z-index: 1000;
+    width: 100%; 
+    overflow: hidden;
  }
+.footer ul{
+   list-style: none; 
+   position: relative; 
+   float: left; 
+   display: block; 
+   left: 50%; 
+}
+.footer ul li{ 
+  position: relative; 
+  float: left; 
+  display: block; 
+  right: 50%; 
+}
  
 .row-offcanvas {
   position: relative;

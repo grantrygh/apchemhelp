@@ -2940,8 +2940,8 @@ button.close {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
-    float: right; 
-    padding-right: 35px;
+    /*float: right; */
+    /*padding-right: 48%;*/
   }
 }
 
