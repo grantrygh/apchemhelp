@@ -12,15 +12,17 @@ footer {
  * Off canvas
  * -------------------------------------------------- */
  .footer{
-  position:fixed;
+  position:relative;
     left: 0px; bottom:0px; right:0px; 
     background: rgb(245, 245, 245);
-
     color: gray;
     border-top: 3px solid rgb(245, 245, 245);  
     text-align: center;  z-index: 1000;
     width: 100%; 
     overflow: hidden;
+ }
+ #short{
+  position:fixed;
  }
 .footer ul{
    list-style: none; 
