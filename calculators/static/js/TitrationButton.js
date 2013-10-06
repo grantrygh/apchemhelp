@@ -32,7 +32,7 @@ function Button(){
 	function bPreReq(){
 		molOH = bTopCon*(bTopVol/1000);
 		molH = aBotCon*(aBotVol/1000);
-		volTot = (parseFloat(bTopVol) + parseFloat(aBotVol))/1000;
+		volTot = (parseFloat(bTopVol) + (parseFloat(aBotVol)))/1000;
 	}
 	function innerPreReq(){
 		molMax = Math.max(molH, molOH);
@@ -472,10 +472,10 @@ function Button(){
 			}
 
 			else if(molOH == molH){
-				Ka = .00000000000001/((bVal || dVal)/1000);
+				Ka = .00000000000001/(bVal || dVal);
 				x = Ka*MSalt;
 				x = Math.sqrt(x);
-				var pH = log10(x);
+				pH = log10(x);
 				pH = pH.toFixed(2);
 				showEquiv(pH);
 			}
@@ -555,7 +555,7 @@ function Button(){
 
 			else if(molMax == molH){
 				pH = log10(aVal || cVal);
-				pH += log10(MSalt/MTot);
+				pH += -log10(MSalt/MTot);
 				pH = pH.toFixed(2);
 				document.getElementById('showPH').value = "pH = " + pH;
 			}	
