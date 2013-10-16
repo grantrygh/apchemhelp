@@ -174,7 +174,7 @@ LOGGING = {
 
 
 ##### [Amazon S3 CDN] #####
-if os.getenv("PUSHING") == 'true':
+if os.getenv("LOCAL_DEVELOPMENT") != 'true':
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
