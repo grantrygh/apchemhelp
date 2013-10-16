@@ -1,0 +1,20 @@
+img{
+	float:left;
+	margin:0 15px 0 0;
+	max-width: 300px;
+	max-height: 300px;
+}
+.abouttext{
+	font-size: 18px;
+}
+.description{
+	/*background-color: #D0D0D0;*/
+	margin-left: 29%;
+	margin-right: 5%;
+}
+.aboutme{
+	margin-left: 50px;
+}
+.question{
+	color: red;
+}
