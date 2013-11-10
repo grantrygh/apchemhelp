@@ -1,15 +1,21 @@
-<head>
-    <title>AP ChemHelp | Contact</title>
+{% extends "base.html" %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+{% block title %}
+AP ChemHelp | Contact
+{% endblock title %}
 
-    <!-- Custom styles for this template -->
-    <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}css/contact.css" rel="stylesheet">
-  </head>
 
-  <body>
+{% block earlyStatic %}
+<!-- Bootstrap core CSS -->
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/contact.css" rel="stylesheet">
+{% endblock earlyStatic %}
+
+
+{% block content %}
+
       <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -24,44 +30,46 @@
     <div class="container">
 
   <header class="body"><br>
-  <br>This page is currently under construction, and therefore may not function properly at this time!<br>
-    <h1><b>Contact Me:</b></h1>
+
+<div class="row-fluid">
+  <div class="span4">
+    
+      <h1><b></b></h1>
+
+      {% if contactComplete %}
+      <h3>Thank you. Your message has been received.<h3>
+      {% else %}
+      <h3>Contact Me:<h3>
+      {% endif %}
+
+  </div>
+</div>
+
     </header>
 
-    <section class="body">
-    <form action="mailto:grantrygh@gmail.com">
-<p>Email
-<input
-name="email"
-size="64"
-maxlength="64"/>
-</p>
-<p>Name
-<input
-name="realname"
-size="64"
-maxlength="64"/>
-</p>
-<p>Subject
-<input
-name="subject"
-size="64"
-maxlength="64"/>
-</p>
-<p>
-</p>Message
-<textarea
-name="body"
-rows="10"
-cols="60">
-</textarea>
-<p>
-<input type="submit" name="send" value="Send Your Message"/>
-</p>
-</form>
-    </section>
+<section class="body">
 
-<hr>
+  <form action="" method="post">{% csrf_token %}
+
+    Email
+    <input name="email" size="64" maxlength="64"/>
+
+    Name
+    <input name="realname" size="64" maxlength="64"/>
+
+    Subject
+    <input name="subject" size="64" maxlength="64"/>
+
+    Message
+    <textarea name="body" rows="10" cols="60"></textarea>
+
+    <input type="submit" name="submit" value="Send Your Message"/>
+
+  </form>
+
+</section>
+
+<hr><br><br><br><br>
         <footer class="footer" id="short">
           AP ChemHelp &copy; 2013
         <div class="nav-collapse collapse">
@@ -75,6 +83,7 @@ cols="60">
 
     </div> <!-- /container -->
 
-    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
-  </body>
+  
+{% endblock content %}

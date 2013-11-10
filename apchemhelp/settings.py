@@ -173,6 +173,12 @@ LOGGING = {
 }
 
 
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.mandrillapp.com'
+EMAIL_PORT = 587
+
+
 ##### [Amazon S3 CDN] #####
 if os.getenv("LOCAL_DEVELOPMENT") != 'true':
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
