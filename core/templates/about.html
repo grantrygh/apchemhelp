@@ -1,26 +1,20 @@
-<head>
-    <title>AP ChemHelp | About</title>
+{% extends "secondarybase.html" %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+{% block title %}
+AP ChemHelp | License
+{% endblock title %}
 
-    <!-- Custom styles for this template -->
-    <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}css/about.css" rel="stylesheet">
-  </head>
 
-  <body>
+{% block earlyStatic %}
+<!-- Bootstrap core CSS -->
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/about.css" rel="stylesheet">
+{% endblock earlyStatic %}
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
-      </div>
-    </div>
+
+{% block content %}
 
     <div class="container">
     <br>
@@ -41,26 +35,13 @@
         <br><br>
         <center><span class="question">Something is wrong!</span></center>
         <br>
-        Nothing is perfect, especially new sites.  Therefore if you find any errors during your use of AP ChemHelp, please contact me at <a href="mailto:grantrygh@gmail.com?Subject=APChemHelp%20Comment" target="_top">grantrygh@gmail.com</a>.  I will be updating the site regularly and need your help to create a better experience for everyone!
+        Nothing is perfect, especially new sites.  Therefore, if you find any errors during your use of AP ChemHelp, please shoot me an email through the Contact page.  I will be updating the site regularly and need your help to create a better experience for everyone!
         </p>
       </div>
     </div>
+{% endblock content %}
 
-        <hr>
-
-        <footer class="footer" id="short">
-          AP ChemHelp &copy; 2013
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/license/">License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div> <!--/.nav-collapse -->
-        </footer>
-
-    </div> <!-- /container -->
-
-    <script src="{{ STATIC_URL }}js/jquery.js"></script>
-    <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
-  </body>
+{% block lateStatic %}
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+<script src="{{ STATIC_URL }}js/offcanvas.js"></script>
+{% endblock lateStatic %}

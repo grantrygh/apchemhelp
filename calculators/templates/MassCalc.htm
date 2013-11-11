@@ -1,28 +1,20 @@
-<html>
-  <head>
-    <title>AP ChemHelp | Mass Calculator</title>
+{% extends "shortbase.html" %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+{% block title %}
+AP ChemHelp | Mass Calculator
+{% endblock title %}
 
-    <!-- Custom styles for this template -->
-    <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
-  </head>
 
-  <body>
+{% block earlyStatic %}
+<!-- Bootstrap core CSS -->
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
-      </div>
-    </div>
-<br>
-<br>
+<!-- Custom styles for this template -->
+<link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
+{% endblock earlyStatic %}
+
+
+{% block content %}
     
   <div class="container">
 
@@ -66,50 +58,12 @@
 </div>
 
 <!-- End Text -->
-
-          </div>
-          </div>
-        <nav class="col-lg-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li><a href="/">Home</a></li>
-              <li class="nav-header">Titration</li>
-              <li class="active"><a href="/calculator/titration/">Titration Calculator</a></li>
-              <li class="nav-header">Molecular</li>
-              <li><a href="/calculator/mass/">Mass Calculator</a></li>
-              <li class="nav-header">Concentration Game</li>
-              <li><a href="/flashcard/acidbase/">Acids and Bases</a></li>
-              <li><a href="/flashcard/periodic/">Periodic Structure</a></li>
-              <li><a href="/flashcard/thermo/">Thermodynamics</a></li>
-              <li class="nav-header">Formula Sheet</li>
-              <li><a href="/formulas/gases/">Gases</a></li>
-              <li><a href="/formulas/equilibrium/">Equilibrium</a></li>
-              <li><a href="/formulas/thermo/">Thermodynamics</a></li>
-              <li><a href="/formulas/kinetics/">Kinetics</a></li>
-            </ul>
-          </div><!--/.well -->
-        </nav><!--/span-->
-      </div><!--/row-->
-
-         <hr>
-        <footer class="footer" id="short">
-          AP ChemHelp &copy; 2013
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/license/">License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div> <!--/.nav-collapse -->
-        </footer>
-
-  </div><!--/.container-->
+{% endblock content %}
 
 
-    <!-- jQuery and plugin -->
+{% block lateStatic %}
     <script src="{{ STATIC_URL }}js/ElementMasses.js" type="text/javascript"></script>
     <script src="{{ STATIC_URL }}js/MassCalc.js" type="text/javascript"></script>
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
-  </body>
-</html>
+{% endblock lateStatic %}

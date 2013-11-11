@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "secondarybase.html" %}
 
 {% block title %}
 AP ChemHelp | Contact
@@ -16,18 +16,7 @@ AP ChemHelp | Contact
 
 {% block content %}
 
-      <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
-      </div>
-    </div>
-
-    <div class="container">
+  <div class="container">
 
   <header class="body"><br>
 
@@ -39,7 +28,7 @@ AP ChemHelp | Contact
       {% if contactComplete %}
       <h3>Thank you. Your message has been received.<h3>
       {% else %}
-      <h3>Contact Me:<h3>
+      <center><h3>Contact Me</h3></center>
       {% endif %}
 
   </div>
@@ -70,20 +59,10 @@ AP ChemHelp | Contact
 </section>
 
 <hr><br><br><br><br>
-        <footer class="footer" id="short">
-          AP ChemHelp &copy; 2013
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/license/">License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div> <!--/.nav-collapse -->
-        </footer>
-
-    </div> <!-- /container -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
-  
 {% endblock content %}
+
+
+{% block lateStatic %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/offcanvas.js"></script>
+{% endblock lateStatic %}

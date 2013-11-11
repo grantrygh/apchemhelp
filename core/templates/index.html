@@ -1,31 +1,24 @@
-<head>
-    <title>AP ChemHelp | Home</title>
+{% extends "secondarybase.html" %}
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
-      </div>
-    </div>
+{% block title %}
+AP ChemHelp | High School Chemistry Help, Calculators, Formulas
+{% endblock title %}
 
 
-    <div class="container">
+{% block earlyStatic %}
+<!-- Bootstrap core CSS -->
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
+{% endblock earlyStatic %}
+
+
+{% block content %}
+
+<div class="container">
 <br><br>
       <div class="jumbotron">
-        <h1>Welcome!</h1>
-        <p>This site was designed as a resource for students taking AP Chemistry. As it has just been recently launched and may not be perfect, please report any errors/problems to me through the Contact page! Enjoy</p>
+        <h2><b><center>Tools for AP Chemistry</center></b></h2>
       </div>
 
       <div class="body-content">
@@ -33,7 +26,7 @@
         <!-- Example row of columns -->
         <div class="row">
                 <div class="col-sm-6 col-lg-3">
-              <h2>Titration Calculator</h2>
+              <center><h2>Titration Calculator</h2></center>
               <p>Multi-functional calculator to assist you with titration problems when finding...
                 <ul>
                   <li>pH</li>
@@ -67,22 +60,9 @@
             </div><!--/span-->
         </div>
         
-        <hr>
+{% endblock content %}
 
-        <footer class="footer" id="short">
-          AP ChemHelp &copy; 2013
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/license/">License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div> <!--/.nav-collapse -->
-        </footer>
-      </div>
-
-    </div> <!-- /container -->
-
-    <script src="{{ STATIC_URL }}js/jquery.js"></script>
-    <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
-  </body>
+{% block lateStatic %}
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+<script src="{{ STATIC_URL }}js/offcanvas.js"></script>
+{% endblock lateStatic %}
