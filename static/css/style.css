@@ -1,0 +1,195 @@
+/* About Page */
+img{
+	float:left;
+	margin:0 15px 0 0;
+	max-width: 300px;
+	max-height: 300px;
+}
+.abouttext{
+	font-size: 18px;
+}
+.description{
+	/*background-color: #D0D0D0;*/
+	margin-left: 29%;
+	margin-right: 5%;
+}
+.aboutme{
+	margin-left: 50px;
+}
+.question{
+	color: red;
+}
+
+
+/* Titration */
+.button {
+	-moz-box-shadow:inset 3px -4px 0px -12px #ededed;
+	-webkit-box-shadow:inset 3px -4px 0px -12px #ededed;
+	box-shadow:inset 3px -4px 0px -12px #ededed;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e8e1e8), color-stop(1, #353535) );
+	background:-moz-linear-gradient( center top, #e8e1e8 5%, #353535 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e1e8', endColorstr='#353535');
+	background-color:#e8e1e8;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #00BFFF;
+	display:inline-block;
+	color:#00BFFF;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:7px 34px;
+	text-decoration:none;
+	text-shadow:1px -1px 3px #353535;
+}.button:hover {
+	color:#00BFFF;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #353535), color-stop(1, #e8e1e8) );
+	background:-moz-linear-gradient( center top, #353535 5%, #e8e1e8 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#353535', endColorstr='#e8e1e8');
+	background-color:#353535;
+}.button:active {
+	color:#00BFFF;
+	position:relative;
+	top:1px;
+}
+input:focus {
+ background-color: yellow; 
+}
+textarea
+{
+background-color: transparent;
+border: none;
+color: red;
+font-size: 175%;
+overflow: hidden;
+}
+.boxed{
+	margin: 35px;
+}
+
+
+/* Flashcard */
+/* Credit to Author: Yane Frenski. */
+.quizy-memorygame{
+  position:relative;
+  display:hidden;
+}
+.quizy-memorygame .mgcard-show{
+  width:156px;
+  height:156px;
+  background:url('../img/mg-mcard.png');
+  padding: 6px;
+}
+.quizy-memorygame .quizy-mg-item{
+  position:absolute;
+  cursor:pointer;
+  text-align:center;
+}
+.quizy-memorygame .quizy-mg-item .quizy-mg-item-bottom, .quizy-memorygame .quizy-mg-item .quizy-mg-item-top{
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:center;
+}
+.quizy-mg-item .quizy-mg-item-top{
+  background:url('../img/quizy-mg-item-top.png');
+  max-width:100%;
+  max-height:100%;
+}
+.quizy-mg-notification-fly{
+  width:266px;
+  height:297px;
+  position:absolute;
+  z-index:1000;
+  display:none;
+  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
+.quizy-mg-notification-fly-neg{
+  background:url('../img/quizy-mg-notif-neg.png');
+}
+.quizy-mg-notification-fly-pos{
+  background:url('../img/quizy-mg-notif-pos.png');
+}
+#quizy-game-summary {
+  width:300px;
+  height:120px;
+  position:absolute;
+  z-index:1001;
+  background: #515b69;
+  box-shadow: rgba(0,0,0,0.7) 0 0 4px, inset 0 0 20px rgba(0, 0, 0, 0.4);;
+  border:1px solid #000;
+  cursor:pointer;
+  display:none;
+}
+#quizy-game-summary div{
+  width:75px;
+  float:left;
+  padding:10px 0 10px 20px;
+  color:#fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+  text-align:center;
+}
+#quizy-game-summary #gs-column1{
+  font-size:16px;
+  padding-top:30px;
+}
+#quizy-game-summary #gs-column2{
+  font-size:12px;
+  padding-top: 65px;
+  background:url('../img/mg-timeicon.png') 75% 20% no-repeat;
+}
+#quizy-game-summary #gs-column3{
+  font-size:12px;
+  padding-top: 65px;
+  background:url('../img/mg-clickicon.png') 75% 20% no-repeat;
+}
+
+
+/* Contact */
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+.body {
+    display:block;
+    margin:0 auto;
+    width:576px;
+}
+form {
+    margin:0 auto;
+    width:459px;
+}
+input, textarea {
+    width:439px;
+    height:40px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+textarea {
+  height:213px;
+}
+input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
+#submit {
+    width:127px;
+    height:38px;
+    text-indent:-9999px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+#submit:hover {
+    opacity:0.9;
+}
