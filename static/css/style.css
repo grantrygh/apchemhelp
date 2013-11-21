@@ -19,6 +19,8 @@ img{
 .question{
 	color: red;
 }
+.self-pic{width:150px; height:150px; float:left; border-radius:50%; border:5px solid #222222;}
+
 
 
 /* Titration */
