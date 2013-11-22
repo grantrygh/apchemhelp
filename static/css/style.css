@@ -1,3 +1,11 @@
+/* Shared Style */
+.nav-header{font-weight: 700; font-size: 15px; padding-top: 15px;}
+.nav{text-align: center;}
+.nav-item{margin: 0; padding: 0; line-height: 0;}
+
+
+
+
 /* About Page */
 .abouttext{
 	font-size: 16px;
