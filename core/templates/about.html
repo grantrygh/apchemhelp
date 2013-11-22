@@ -7,8 +7,8 @@ AP ChemHelp | License
 
 {% block earlyStatic %}
 <!-- Bootstrap core CSS -->
-<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 <!-- Custom styles for this template -->
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
 {% endblock earlyStatic %}
@@ -16,29 +16,80 @@ AP ChemHelp | License
 
 {% block content %}
 
+
     <div class="container">
-    <br>
-    <center><h1>About</h1></center>
-    <br><br>
-    <div class="aboutme">
-      <img class="self-pic" src="{{ STATIC_URL }}img/aboutpic.png">
-      <div class="description">
-        <p class="abouttext">
-        <center><span class="question">Who is this guy, you ask?</span></center>
-        <br>
-        Well, to start, my name is Grant Rygh and I am currently a senior attending Horlick High School in Racine, Wisconsin.<br>
-        I'm not a professional web developer, nor am I a chemist, however I do possess some knowledge in chemistry, as well as some basic coding skills that I have recently picked up.  
-        <br><br>
-        <center><span class="question">Why did I make this website?</span></center>
-        <br>
-        I created this website for one purpose: to serve as a resource for other students taking a chemistry class, whether it's AP, Honors, or regular.
-        <br><br>
-        <center><span class="question">Something is wrong!</span></center>
-        <br>
-        Nothing is perfect, especially new sites.  Therefore, if you find any errors during your use of AP ChemHelp, please shoot me an email through the Contact page.  I will be updating the site regularly and need your help to create a better experience for everyone!
-        </p>
+      <br>
+
+
+      <div class="row text-center">
+        <div class="col-lg-12 text-center">
+          <h1>About</h1>
+        <hr id='about-rule'>
+        
+        </div>
       </div>
-    </div>
+      
+
+    <div class="aboutme">
+      <div class="row">
+        <div class="col-lg-8 col-offset-2">
+        
+          <!-- BLOCK 1 -->
+          <div class="row">
+            <span class="question">Who am I?</span>
+            <div class="col-lg-4">
+              <img class="self-pic" src="{{ STATIC_URL }}img/aboutpic.png">
+            </div>
+            <div class="col-lg-8">
+              <p class="abouttext">
+                Well, to start, my name is Grant Rygh and I am currently a senior attending Horlick High School in Racine, Wisconsin.
+                I'm not a professional web developer, nor am I a chemist, however I do possess some knowledge in chemistry, as well as some basic coding skills that I have recently picked up.  
+              </p>
+            </div>
+          </div>
+          <hr id='question-rule'>
+
+          <!-- BLOCK 2 -->
+          <div class="row">
+            <span class="question">Why did I build APChemHelp?</span>
+            <div class="col-lg-12">
+              <p class="abouttext">
+                I created this website for one purpose: to serve as a resource for other students taking a chemistry class, whether it's AP, Honors, or regular. 
+              </p>
+            </div>
+          </div>
+          <hr id='question-rule'>
+
+          <!-- BLOCK 3 -->
+          <div class="row">
+            <span class="question">Something is broken!</span>
+            <div class="col-lg-12">
+              <p class="abouttext">
+                If you find any errors on the website, please shoot me an email through the <a href="/contact/">the contact page</a>. I will be updating the site regularly to sort out bugs and add new content.
+              </p>
+            </div>
+          </div>
+          <hr id='question-rule'>
+
+          <!-- BLOCK 4 -->
+          <div class="row">
+            <span class="question">Can I help contribute?</span>
+            <div class="col-lg-12">
+              <p class="abouttext">
+                If you are a teacher or student and would like to help out or donate content/study materials, please <a href="/contact/">contact me</a>.
+                We are also looking for help to build new features. The application is open-sourced and can be found <a href="#">on GitHub</a>. Come
+                help build APChemHelp with us!
+              </p>
+            </div>
+          </div>
+          <hr id='question-rule'>
+
+
+        </div>  <!-- end col-offset -->
+      </div>  <!-- end row -->
+    </div>  <!-- end aboutme -->
+  </div>  <!-- end container -->
+
 {% endblock content %}
 
 {% block lateStatic %}
