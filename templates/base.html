@@ -12,60 +12,40 @@
 </head>
 
 <body>
+
   <!--Header-->
   <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
-      </div>
-    </div>
-    <br><br>
+    <div class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
+    </div>  <!-- end container -->
+  </div>  <!-- end navbar header -->
+  <br><br>
     
   {% block content %}
   {% endblock content %}
 
-         </div>
-          </div>
-        <nav class="col-lg-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              
-              <li class="nav-header">Titration</li>
-              <li class="nav-item"><a href="/calculator/titration/">Titration Calculator</a></li>
-              <li class="nav-header">Molecular</li>
-              <li class="nav-item"><a href="/calculator/mass/">Mass Calculator</a></li>
-              <li class="nav-header">Concentration Game</li>
-              <li class="nav-item"><a href="/flashcard/acidbase/">Acids and Bases</a></li>
-              <li class="nav-item"><a href="/flashcard/periodic/">Periodic Structure</a></li>
-              <li class="nav-item"><a href="/flashcard/thermo/">Thermodynamics</a></li>
-              <li class="nav-header">Formula Sheet</li>
-              <li class="nav-item"><a href="/formulas/gases/">Gases</a></li>
-              <li class="nav-item"><a href="/formulas/equilibrium/">Equilibrium</a></li>
-              <li class="nav-item"><a href="/formulas/thermo/">Thermodynamics</a></li>
-              <li class="nav-item"><a href="/formulas/kinetics/">Kinetics</a></li>
-            </ul>
-          </div><!--/.well -->
-        </nav><!--/span-->
-      </div><!--/row-->
+  {% block sidenav %}{% endblock sidenav %}
 
-         <hr>
-        <footer class="footer">
-          AP ChemHelp &copy; 2013
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/license/">License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div> <!--/.nav-collapse -->
-        </footer>
-
-  </div><!--/.container-->
+  {% block footer %}
+  <hr>
+  <footer class="footer">
+    AP ChemHelp &copy; 2013
+    <div class="nav-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/license/">License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+        <li><a href="/about/">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div> <!--/.nav-collapse -->
+  </footer>
+  {% endblock footer %}
 
   {% block lateStatic %}{% endblock lateStatic %}
+
 </body>  
 </html>
