@@ -8,7 +8,6 @@ AP ChemHelp | Mass Calculator
 {% block earlyStatic %}
 <!-- Bootstrap core CSS -->
 <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
-
 <!-- Custom styles for this template -->
 <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
@@ -207,15 +206,13 @@ AP ChemHelp | Mass Calculator
 
       <input type="text" name="botVol" id="bBotVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('bBotVol')">
       <input type="text" name="botCon" id="bBotCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('bBotCon')">
+
     </span>
-    <br />
-    <br />
+
     <div>
     <center><span>pH: 
     <input type="text" name="blank" id="desPH" placeholder="Desired pH" style="border: 1px solid" onClick='option("pH")' onblur="removeLetters('desPH')">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" name="same" id="neutral" onClick='option("eqpoint")'> Neutralization / Equivalence
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" name="same" id="mid" onClick='option("midpoint")'> Midpoint
     </span></center></div>
     <br />
