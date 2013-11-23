@@ -23,7 +23,8 @@
   font-size: 18px;
   display: block;
 }
-.self-pic{width:150px; height:150px; border-radius:50%; border:5px solid #222222; display: block; margin-left: auto; margin-right: auto;}
+.self-pic{width:175px; height:225px; border-radius:65%; border: 0px solid #000000; display:block; margin-left: auto; margin-right: auto;}
+#abpic{ margin-top: -40px; margin-bottom: -10px;}
 #about-rule{background-color: #222222; height: 1px; width: 75%; opacity: 0.4}
 #question-rule{background-color: #222222; height: 1px; width: 100%; opacity: 0.2}
 
