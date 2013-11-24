@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Mass Calculator
@@ -14,223 +14,227 @@ AP ChemHelp | Mass Calculator
 {% endblock earlyStatic %}
 
 
-{% block content %}
+{% block container %}
     
-  <div class="container">
 
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>Being Added...</h2>
+          </div>
+          <div class="col-lg-4">
             <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
+            <a href="#" onClick="help()"><span class="badge badge-info"><b>?</b></span></a>
+          </div>
+        </div>
 
-<!-- Text -->
+        <div class="row">
+          Acid:
+          <input type="radio" name="acidBase" id="acid" value="topAcid" onClick="show()">
+          <span id="topAcid" style="visibility: hidden">
+            <select id="acidList" style="border: 1.5px solid">
+              <option></option>
+              <optgroup label="Strong Acids">
+                <option value="100">Hydrochloric Acid,  HCl</option>
+                <option value="100">Chloric Acid,  HClO3</option>
+                <option value="100">Hydrobromic Acid,  HBr</option>
+                <option value="100">Hydroiodic Acid,  HI</option>
+                <option value="100">Nitric Acid,  HNO3</option>
+                <option value="100">Perchloric Acid,  HClO4</option>
+                <option value="100" id="two">Sulfuric Acid,  H2SO4</option>
+              </optgroup>
 
-<div class="outer">
-    <div class="boxed">
-    <h2>Being Added...<a href="#" onClick="help()"><span class="badge badge-info" style="float: right"><b>?</b></span></a>
+              <optgroup label="Weak Acids">
+                <option value=".000018">Acetic Acid,  CH3COOH</option>
+                <option value=".00000000056">Ammonium Ion,  NH4+</option>
+                <option value=".000064">Benzoic Acid,  C6H5COOH</option>
+                <option value=".00000000058" id="three">Boric Acid,  H3BO3</option>
+                <option value=".00000043" id="two">Carbonic Acid (Ka1),  H2CO3</option>
+                <option value=".000000000056">Carbonic Acid (Ka2),  HCO3</option>
+                <option value=".00084" id="three">Citric Acid,  H3C6H5O7</option>
+                <option value=".00018">Formic Acid,  HCOOH</option>
+                <option value=".00000000062">Hydrocyanic Acid,  HCN</option>
+                <option value=".00072">Hydrofluoric Acid,  HF</option>
+                <option value=".0000001" id="two">Hydrosulfuric Acid,  H2S</option>
+                <option value=".000000035">Hypochlorous Acid,  HOCl</option>
+                <option value=".000000002">Hypobromous Acid,  HOBr</option>
+                <option value=".17">Iodic Acid,  HIO3</option>
+                <option value=".000138">Lactic Acid,  HC3H5O3</option>
+                <option value=".00040">Nitrous Acid,  HNO2</option>
+                <option value=".065" id="two">Oxalic Acid (Ka1),  H2C2O4</option>
+                <option value=".000061">Oxalic Acid (Ka2),  HC2O4</option>
+                <option value=".00000000016">Phenol,  C6H5OH</option>
+                <option value=".0075" id="three">Phosphoric Acid (Ka1),  H3PO4</option>
+                <option value=".000000062" id="two">Phosphoric Acid (Ka2),  H2PO4</option>
+                <option value=".00000000000048">Phosphoric Acid (Ka3),  HPO4</option>
+                <option value=".000013">Propanic Acid,  CH3CH2COOH</option>
+                <option value=".000017">Sorbic Acid,  HC6H7O2</option>
+                <option value=".015" id="two">Sulfurous Acid (Ka1),  H2SO3</option>
+                <option value=".0000001">Sulfurous Acid (Ka2),  HSO3</option>
+                <option value=".0000007" id="two">Water,  H20</option>
+              </optgroup>
+            </select>
 
-    </h2>
+            <input class="titration-input" type="text" name="topVol" id="aTopVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('aTopVol')">
+            <input class="titration-input" type="text" name="topCon" id="aTopCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('aTopCon')">
+          </span> 
+        </div>  <!-- end row -->
 
-    Acid: <input type="radio" name="acidBase" id="acid" value="topAcid" onClick="show()">
-    <span id="topAcid" style="visibility: hidden">
-      <select id="acidList" style="border: 1.5px solid">
-        <option></option>
-        <optgroup label="Strong Acids">
-          <option value="100">Hydrochloric Acid,  HCl</option>
-          <option value="100">Chloric Acid,  HClO3</option>
-          <option value="100">Hydrobromic Acid,  HBr</option>
-          <option value="100">Hydroiodic Acid,  HI</option>
-          <option value="100">Nitric Acid,  HNO3</option>
-          <option value="100">Perchloric Acid,  HClO4</option>
-          <option value="100" id="two">Sulfuric Acid,  H2SO4</option>
-        </optgroup>
+        <div class="row">
+          Base:
+          <input type="radio" name="acidBase" id="base" value="topBase" onClick="show()">
+          <span id="topBase" style="visibility: hidden">
+            <select id="baseList" style="border: 1.5px solid">
+              <option></option>
+              <optgroup label="Strong Bases">
+                <option value="100">Sodium Hydroxide,  NaOH</option>
+                <option value="100" id="two">Barium Hydroxide,  Ba(OH)2</option>
+                <option value="100" id="two">Calcium Hydroxide,  Ca(OH)2</option>
+                <option value="100">Cesium Hydroxide,  CsOH</option>
+                <option value="100">Lithium Hydroxide,  LiOH</option>
+                <option value="100">Potassium Hydroxide,  KOH</option>
+                <option value="100">Rubidium Hydroxide,  RbOH</option>
+                <option value="100" id="two">Strontium Hydroxide,  Sr(OH)2</option>
+              </optgroup>
 
-        <optgroup label="Weak Acids">
-          <option value=".000018">Acetic Acid,  CH3COOH</option>
-          <option value=".00000000056">Ammonium Ion,  NH4+</option>
-          <option value=".000064">Benzoic Acid,  C6H5COOH</option>
-          <option value=".00000000058" id="three">Boric Acid,  H3BO3</option>
-          <option value=".00000043" id="two">Carbonic Acid (Ka1),  H2CO3</option>
-          <option value=".000000000056">Carbonic Acid (Ka2),  HCO3</option>
-          <option value=".00084" id="three">Citric Acid,  H3C6H5O7</option>
-          <option value=".00018">Formic Acid,  HCOOH</option>
-          <option value=".00000000062">Hydrocyanic Acid,  HCN</option>
-          <option value=".00072">Hydrofluoric Acid,  HF</option>
-          <option value=".0000001" id="two">Hydrosulfuric Acid,  H2S</option>
-          <option value=".000000035">Hypochlorous Acid,  HOCl</option>
-          <option value=".000000002">Hypobromous Acid,  HOBr</option>
-          <option value=".17">Iodic Acid,  HIO3</option>
-          <option value=".000138">Lactic Acid,  HC3H5O3</option>
-          <option value=".00040">Nitrous Acid,  HNO2</option>
-          <option value=".065" id="two">Oxalic Acid (Ka1),  H2C2O4</option>
-          <option value=".000061">Oxalic Acid (Ka2),  HC2O4</option>
-          <option value=".00000000016">Phenol,  C6H5OH</option>
-          <option value=".0075" id="three">Phosphoric Acid (Ka1),  H3PO4</option>
-          <option value=".000000062" id="two">Phosphoric Acid (Ka2),  H2PO4</option>
-          <option value=".00000000000048">Phosphoric Acid (Ka3),  HPO4</option>
-          <option value=".000013">Propanic Acid,  CH3CH2COOH</option>
-          <option value=".000017">Sorbic Acid,  HC6H7O2</option>
-          <option value=".015" id="two">Sulfurous Acid (Ka1),  H2SO3</option>
-          <option value=".0000001">Sulfurous Acid (Ka2),  HSO3</option>
-          <option value=".0000007" id="two">Water,  H20</option>
-        </optgroup>
-      </select>
+              <optgroup label="Weak Bases">
+                <option value=".000018">Ammonia,  NH3</option>
+                <option value=".00000000038">Aniline,  C6H5NH2</option>
+                <option value=".0013">Diethylamine,  (C2H5)2NH</option>
+                <option value=".00056">Ethylamine,  C2H5NH2</option>
+                <option value=".000003">Hydrazine,  H2NNH2</option>
+                <option value=".000000011">Hydroxylamine,  NH2OH</option>
+                <option value=".000438">Methylamine,  CH3NH2</option>
+                <option value=".0000000017">Pyridine,  C5H5N</option>
+                <option value=".0004">Triethylamine,  (C2H5)3N</option>
+                <option value=".000000000000015">Urea,  NH2CONH2</option>
+                <option value=".000065">Water,  H2O</option>
+              </optgroup> 
+            </select>
 
-      <input type="text" name="topVol" id="aTopVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('aTopVol')">
-      <input type="text" name="topCon" id="aTopCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('aTopCon')">
-    </span> 
+            <input class="titration-input" type="text" name="topVol" id="bTopVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('bTopVol')">
+            <input class="titration-input" type="text" name="topCon" id="bTopCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('bTopCon')">
+          </span>
+        </div>  <!-- end row -->
 
-    <br>
+        <div class="row">
+          <h2>...To</h2>
+          Acid: 
+          <input type="radio" name="acidBase2" id="acid2" value="botAcid" onClick="show()">
+          <span id="botAcid" style="visibility: hidden">
+            <select id="acidList2" style="border: 1.5px solid">
+              <option></option>
+              <optgroup label="Strong Acids">
+                <option value="100">Hydrochloric Acid,  HCl</option>
+                <option value="100">Chloric Acid,  HClO3</option>
+                <option value="100">Hydrobromic Acid,  HBr</option>
+                <option value="100">Hydroiodic Acid,  HI</option>
+                <option value="100">Nitric Acid,  HNO3</option>
+                <option value="100">Perchloric Acid,  HClO4</option>
+                <option value="100" id="two">Sulfuric Acid,  H2SO4</option>
+              </optgroup>
 
-    Base: <input type="radio" name="acidBase" id="base" value="topBase" onClick="show()">
-    <span id="topBase" style="visibility: hidden">
-      <select id="baseList" style="border: 1.5px solid">
-        <option></option>
-        <optgroup label="Strong Bases">
-          <option value="100">Sodium Hydroxide,  NaOH</option>
-          <option value="100" id="two">Barium Hydroxide,  Ba(OH)2</option>
-          <option value="100" id="two">Calcium Hydroxide,  Ca(OH)2</option>
-          <option value="100">Cesium Hydroxide,  CsOH</option>
-          <option value="100">Lithium Hydroxide,  LiOH</option>
-          <option value="100">Potassium Hydroxide,  KOH</option>
-          <option value="100">Rubidium Hydroxide,  RbOH</option>
-          <option value="100" id="two">Strontium Hydroxide,  Sr(OH)2</option>
-        </optgroup>
+              <optgroup label="Weak Acids">
+                <option value=".000018">Acetic Acid,  CH3COOH</option>
+                <option value=".00000000056">Ammonium Ion,  NH4+</option>
+                <option value=".000064">Benzoic Acid,  C6H5COOH</option>
+                <option value=".00000000058" id="three">Boric Acid,  H3BO3</option>
+                <option value=".00000043" id="two">Carbonic Acid (Ka1),  H2CO3</option>
+                <option value=".000000000056">Carbonic Acid (Ka2),  HCO3</option>
+                <option value=".00084" id="three">Citric Acid,  H3C6H5O7</option>
+                <option value=".00018">Formic Acid,  HCOOH</option>
+                <option value=".00000000062">Hydrocyanic Acid,  HCN</option>
+                <option value=".00072">Hydrofluoric Acid,  HF</option>
+                <option value=".0000001" id="two">Hydrosulfuric Acid,  H2S</option>
+                <option value=".000000035">Hypochlorous Acid,  HOCl</option>
+                <option value=".000000002">Hypobromous Acid,  HOBr</option>
+                <option value=".17">Iodic Acid,  HIO3</option>
+                <option value=".000138">Lactic Acid,  HC3H5O3</option>
+                <option value=".00040">Nitrous Acid,  HNO2</option>
+                <option value=".065" id="two">Oxalic Acid (Ka1),  H2C2O4</option>
+                <option value=".000061">Oxalic Acid (Ka2),  HC2O4</option>
+                <option value=".00000000016">Phenol,  C6H5OH</option>
+                <option value=".0075" id="three">Phosphoric Acid (Ka1),  H3PO4</option>
+                <option value=".000000062" id="two">Phosphoric Acid (Ka2),  H2PO4</option>
+                <option value=".00000000000048">Phosphoric Acid (Ka3),  HPO4</option>
+                <option value=".000013">Propanic Acid,  CH3CH2COOH</option>
+                <option value=".000017">Sorbic Acid,  HC6H7O2</option>
+                <option value=".015" id="two">Sulfurous Acid (Ka1),  H2SO3</option>
+                <option value=".0000001">Sulfurous Acid (Ka2),  HSO3</option>
+                <option value=".0000007" id="two">Water,  H20</option>
+              </optgroup>
+            </select>
 
-        <optgroup label="Weak Bases">
-          <option value=".000018">Ammonia,  NH3</option>
-          <option value=".00000000038">Aniline,  C6H5NH2</option>
-          <option value=".0013">Diethylamine,  (C2H5)2NH</option>
-          <option value=".00056">Ethylamine,  C2H5NH2</option>
-          <option value=".000003">Hydrazine,  H2NNH2</option>
-          <option value=".000000011">Hydroxylamine,  NH2OH</option>
-          <option value=".000438">Methylamine,  CH3NH2</option>
-          <option value=".0000000017">Pyridine,  C5H5N</option>
-          <option value=".0004">Triethylamine,  (C2H5)3N</option>
-          <option value=".000000000000015">Urea,  NH2CONH2</option>
-          <option value=".000065">Water,  H2O</option>
-        </optgroup> 
-      </select>
+            <input type="text" name="botVol" id="aBotVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('aBotVol')">
+            <input type="text" name="botCon" id="aBotCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('aBotCon')">
+          </span>
+        </div>  <!-- end row -->
 
-      <input type="text" name="topVol" id="bTopVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('bTopVol')">
-      <input type="text" name="topCon" id="bTopCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('bTopCon')">
-    </span>
+        <div class="row">
+          Base: 
+          <input type="radio" name="acidBase2" id="base2" value="botBase" onClick="show()">
+          <span id="botBase" style="visibility: hidden">
+            <select id="baseList2" style="border: 1.5px solid">
+              <option></option>
+              <optgroup label="Strong Bases">
+                <option value="100">Sodium Hydroxide,  NaOH</option>
+                <option value="100" id="two">Barium Hydroxide,  Ba(OH)2</option>
+                <option value="100" id="two">Calcium Hydroxide,  Ca(OH)2</option>
+                <option value="100">Cesium Hydroxide,  CsOH</option>
+                <option value="100">Lithium Hydroxide,  LiOH</option>
+                <option value="100">Potassium Hydroxide,  KOH</option>
+                <option value="100">Rubidium Hydroxide,  RbOH</option>
+                <option value="100" id="two">Strontium Hydroxide,  Sr(OH)2</option>
+              </optgroup>
 
-    <br>
-    <br>
+              <optgroup label="Weak Bases">
+                <option value=".000018">Ammonia,  NH3</option>
+                <option value=".00000000038">Aniline,  C6H5NH2</option>
+                <option value=".0013">Diethylamine,  (C2H5)2NH</option>
+                <option value=".00056">Ethylamine,  C2H5NH2</option>
+                <option value=".000003">Hydrazine,  H2NNH2</option>
+                <option value=".000000011">Hydroxylamine,  NH2OH</option>
+                <option value=".000438">Methylamine,  CH3NH2</option>
+                <option value=".0000000017">Pyridine,  C5H5N</option>
+                <option value=".0004">Triethylamine,  (C2H5)3N</option>
+                <option value=".000000000000015">Urea,  NH2CONH2</option>
+                <option value=".000065">Water,  H2O</option>
+              </optgroup> 
+            </select>
 
-    <h2>...To</h2>
+            <input type="text" name="botVol" id="bBotVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('bBotVol')">
+            <input type="text" name="botCon" id="bBotCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('bBotCon')">
+          </span>
+        </div>  <!-- end row -->
 
-    Acid: <input type="radio" name="acidBase2" id="acid2" value="botAcid" onClick="show()">
-    <span id="botAcid" style="visibility: hidden">
-      <select id="acidList2" style="border: 1.5px solid">
-        <option></option>
-        <optgroup label="Strong Acids">
-          <option value="100">Hydrochloric Acid,  HCl</option>
-          <option value="100">Chloric Acid,  HClO3</option>
-          <option value="100">Hydrobromic Acid,  HBr</option>
-          <option value="100">Hydroiodic Acid,  HI</option>
-          <option value="100">Nitric Acid,  HNO3</option>
-          <option value="100">Perchloric Acid,  HClO4</option>
-          <option value="100" id="two">Sulfuric Acid,  H2SO4</option>
-        </optgroup>
 
-        <optgroup label="Weak Acids">
-          <option value=".000018">Acetic Acid,  CH3COOH</option>
-          <option value=".00000000056">Ammonium Ion,  NH4+</option>
-          <option value=".000064">Benzoic Acid,  C6H5COOH</option>
-          <option value=".00000000058" id="three">Boric Acid,  H3BO3</option>
-          <option value=".00000043" id="two">Carbonic Acid (Ka1),  H2CO3</option>
-          <option value=".000000000056">Carbonic Acid (Ka2),  HCO3</option>
-          <option value=".00084" id="three">Citric Acid,  H3C6H5O7</option>
-          <option value=".00018">Formic Acid,  HCOOH</option>
-          <option value=".00000000062">Hydrocyanic Acid,  HCN</option>
-          <option value=".00072">Hydrofluoric Acid,  HF</option>
-          <option value=".0000001" id="two">Hydrosulfuric Acid,  H2S</option>
-          <option value=".000000035">Hypochlorous Acid,  HOCl</option>
-          <option value=".000000002">Hypobromous Acid,  HOBr</option>
-          <option value=".17">Iodic Acid,  HIO3</option>
-          <option value=".000138">Lactic Acid,  HC3H5O3</option>
-          <option value=".00040">Nitrous Acid,  HNO2</option>
-          <option value=".065" id="two">Oxalic Acid (Ka1),  H2C2O4</option>
-          <option value=".000061">Oxalic Acid (Ka2),  HC2O4</option>
-          <option value=".00000000016">Phenol,  C6H5OH</option>
-          <option value=".0075" id="three">Phosphoric Acid (Ka1),  H3PO4</option>
-          <option value=".000000062" id="two">Phosphoric Acid (Ka2),  H2PO4</option>
-          <option value=".00000000000048">Phosphoric Acid (Ka3),  HPO4</option>
-          <option value=".000013">Propanic Acid,  CH3CH2COOH</option>
-          <option value=".000017">Sorbic Acid,  HC6H7O2</option>
-          <option value=".015" id="two">Sulfurous Acid (Ka1),  H2SO3</option>
-          <option value=".0000001">Sulfurous Acid (Ka2),  HSO3</option>
-          <option value=".0000007" id="two">Water,  H20</option>
-        </optgroup>
-      </select>
+        <div class="row ph-row">
+          pH: 
+          <input type="text" name="blank" id="desPH" placeholder="Desired pH" style="border: 1px solid" onClick='option("pH")' onblur="removeLetters('desPH')">
+          <input type="radio" name="same" id="neutral" onClick='option("eqpoint")'> Neutralization / Equivalence
+          <input type="radio" name="same" id="mid" onClick='option("midpoint")'> Midpoint
+        </div>  <!-- end row -->
 
-      <input type="text" name="botVol" id="aBotVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('aBotVol')">
-      <input type="text" name="botCon" id="aBotCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('aBotCon')">
-    </span>
 
-    <br>
 
-    Base: <input type="radio" name="acidBase2" id="base2" value="botBase" onClick="show()">
-    <span id="botBase" style="visibility: hidden">
-      <select id="baseList2" style="border: 1.5px solid">
-        <option></option>
-        <optgroup label="Strong Bases">
-          <option value="100">Sodium Hydroxide,  NaOH</option>
-          <option value="100" id="two">Barium Hydroxide,  Ba(OH)2</option>
-          <option value="100" id="two">Calcium Hydroxide,  Ca(OH)2</option>
-          <option value="100">Cesium Hydroxide,  CsOH</option>
-          <option value="100">Lithium Hydroxide,  LiOH</option>
-          <option value="100">Potassium Hydroxide,  KOH</option>
-          <option value="100">Rubidium Hydroxide,  RbOH</option>
-          <option value="100" id="two">Strontium Hydroxide,  Sr(OH)2</option>
-        </optgroup>
+        <div class="row btn-cstm">
+          <button type="button" class="btn btn-default" onClick="Button()">Calculate</button>
+        </div>
 
-        <optgroup label="Weak Bases">
-          <option value=".000018">Ammonia,  NH3</option>
-          <option value=".00000000038">Aniline,  C6H5NH2</option>
-          <option value=".0013">Diethylamine,  (C2H5)2NH</option>
-          <option value=".00056">Ethylamine,  C2H5NH2</option>
-          <option value=".000003">Hydrazine,  H2NNH2</option>
-          <option value=".000000011">Hydroxylamine,  NH2OH</option>
-          <option value=".000438">Methylamine,  CH3NH2</option>
-          <option value=".0000000017">Pyridine,  C5H5N</option>
-          <option value=".0004">Triethylamine,  (C2H5)3N</option>
-          <option value=".000000000000015">Urea,  NH2CONH2</option>
-          <option value=".000065">Water,  H2O</option>
-        </optgroup> 
-      </select>
 
-      <input type="text" name="botVol" id="bBotVol" value="" placeholder="Volume (mL)" style="border: 2px solid" onblur="removeLetters('bBotVol')">
-      <input type="text" name="botCon" id="bBotCon" value="" placeholder="Concentration (M)" style="border: 2px solid" onblur="removeLetters('bBotCon')">
 
-    </span>
 
-    <div>
-    <center><span>pH: 
-    <input type="text" name="blank" id="desPH" placeholder="Desired pH" style="border: 1px solid" onClick='option("pH")' onblur="removeLetters('desPH')">
-    <input type="radio" name="same" id="neutral" onClick='option("eqpoint")'> Neutralization / Equivalence
-    <input type="radio" name="same" id="mid" onClick='option("midpoint")'> Midpoint
-    </span></center></div>
-    <br />
-    <center><a href="#" class="button" onClick="Button()">Calculate</a></center>
-    <br>
+    <div id="showPH">Foo</div>
     <textarea id="showPH" rows="3" cols="20" readonly></textarea>
     <textarea id="showVolCon" rows="3" cols="29" readonly></textarea>
-    <br />
-    </div>
-    </div>
 
-{% endblock content %}
+{% endblock container %}
+
 
 
 {% block lateStatic %}
-    <!-- jQuery and plugin -->
-    <script src="{{ STATIC_URL }}js/TitrationShow.js" type="text/javascript"></script>
-    <script src="{{ STATIC_URL }}js/TitrationButton.js" type="text/javascript"></script>
-    <script src="{{ STATIC_URL }}js/jquery.js"></script>
-    <script src="{{ STATIC_URL }}js/offcanvas.js"></script>
+<!-- jQuery and plugin -->
+<script src="{{ STATIC_URL }}js/TitrationShow.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}js/TitrationButton.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+<script src="{{ STATIC_URL }}js/offcanvas.js"></script>
 {% endblock lateStatic %}

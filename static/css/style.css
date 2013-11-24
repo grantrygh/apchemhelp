@@ -51,7 +51,8 @@
 	padding:7px 34px;
 	text-decoration:none;
 	text-shadow:1px -1px 3px #353535;
-}.button:hover {
+}
+.button:hover {
 	color:#00BFFF;
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #353535), color-stop(1, #e8e1e8) );
 	background:-moz-linear-gradient( center top, #353535 5%, #e8e1e8 100% );
@@ -62,21 +63,15 @@
 	position:relative;
 	top:1px;
 }
-input:focus{
- background-color: yellow; 
-}
-textarea
-{
-background-color: transparent;
-border: none;
-color: red;
-font-size: 175%;
-overflow: hidden;
-}
 .boxed{
 	margin: 35px;
 }
-
+.ph-row{margin-top: 20px;}
+.btn-cstm{text-align: center;}
+.tcontainer-outer{background-color: #EFEFEF;}
+.tcontainer-inner{margin-left: 15px; margin-top: 10px;}
+/*#showPH{width: 100px; background-color: yellow; display: block; height: 20px; color: black;}
+#showVolCon{width: 100px; background-color: green;}*/
 
 /* Flashcard */
 /* Credit to Author: Yane Frenski. */
@@ -172,7 +167,26 @@ form {
     margin:0 auto;
     width:459px;
 }
-input, textarea {
+/*input{
+    width:439px;
+    height:40px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}*/
+input .titration-input{
+    width:250px;
+    height:40px;
+    font-size:0.9em;
+    color:#3a3a3a;
+}
+textarea {
     width:439px;
     height:40px;
     background:#efefef;
@@ -185,6 +199,7 @@ input, textarea {
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
 }
+
 textarea {
   height:213px;
 }
