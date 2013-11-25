@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Kinetics Formulas
@@ -14,107 +14,98 @@ AP ChemHelp | Kinetics Formulas
 {% endblock earlyStatic %}
 
 
-{% block content %}
+{% block container %}
     
-  <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
-            <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
-
 <!-- Text -->
 
 <div class="flowpanes" id="flowpanes">
   <div>
-  <h3><center>Kinetics Formulas</center></h3>
-    <!-- Equilibrium -->
-    <center>
-    <table border="1" id="acidsbases" padding="5px">
-      <tr>
-        <th><center>Name</center></th>
-        <th><center>Formula</center></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td><center>Zero-Order</center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;Rate&space;=&space;k"></center></td>
-        <td><center>Rate<br><br></center></td>
-      </tr>
-      <tr>
-        <td><center></center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;[A]=-kt\,&space;&plus;\,&space;[A]_{0}"></center></td>
-        <td><center>Integrated Rate Law<br></center>Plot: [A] vs. t<br>
-        Slope: -k<br>
-        Units: mole L<sup>-1</sup> sec<sup>-1</sup></td>
-      </tr>
-
-      <tr>
-        <td><center></center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;t_{1/2}=\frac{[A]_{0}}{2k}"></center></td>
-        <td><center>Half-Life</center></td>
-      </tr>
-      <tr>
-        <td><center>First-Order</center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;Rate&space;=&space;k[A]^{1}"></center></td>
-        <td><center>Rate<br><br></center></td>
-      </tr>
-      <tr>
-        <td><center></center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;ln[A]=-kt\,&space;&plus;\,&space;ln[A]_{0}"></center></td>
-        <td><center>Integrated Rate Law<br></center>Plot: ln[A] vs. t<br>
-        Slope: -k<br>
-        Units: sec<sup>-1</sup></td>
-      </tr>
-
-      <tr>
-        <td><center></center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;t_{1/2}=\frac{0.693}{k}"></center></td>
-        <td><center>Half-Life</center></td>
-      </tr>
+    <h3><center>Kinetics Formulas</center></h3>
+      <!-- Equilibrium -->
+      <center>
+      <table border="1" id="acidsbases" padding="5px">
         <tr>
-        <td><center>Second-Order</center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;Rate&space;=&space;k[A]^{2}"></center></td>
-        <td><center>Rate<br><br></center></td>
-      </tr>
-      <tr>
-        <td><center></center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{1}{[A]}=kt\,&space;&plus;\,&space;\frac{1}{[A]_{0}}"></center></td>
-        <td><center>Integrated Rate Law<br></center>Plot: 1/[A] vs. t<br>
-        Slope: k<br>
-        Units: L mole<sup>-1</sup> sec<sup>-1</sup></td>
-      </tr>
-      <tr>
-        <td><center></center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;t&space;_{1/2}=\frac{1}{k[A]_{0}}"></center></td>
-        <td><center>Half-Life</center></td>
-      </tr>
-      <tr>
-        <td><center>Arrhenius Equation</center></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\large&space;k=zpe^{-E_{a}\RT}"></center></td>
-        <td><center>Accounts for proper molecular orientation and <br>energy needed in the collision for a reaction to occur.<br>
-        E<sub>a</sub> = Activation Energy</center></td>
-      </tr>      
-      <tr>
-        <td><center></center></td>
-        <td><center>&nbsp;&nbsp;<img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;ln(k)=-\frac{E_{a}}{R}(\frac{1}{T})\,&space;&plus;\,&space;ln(A)">&nbsp;&nbsp;</center></td>
-        <td>Plot: ln(k) vs. 1/T<br></td>
-      </tr>
-      <tr>
-        <td><center></center></td>
-        <td><center>&nbsp;&nbsp;<img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;ln(\frac{k_{2}}{k_{1}})=\frac{E_{a}}{R}(\frac{1}{T_{1}}\,&space;-\,&space;\frac{1}{T_{2}})">&nbsp;&nbsp;</center></td>
-        <td><center>k<sub>1</sub> and k<sub>2</sub> are measured at temperatures T<sub>1</sub> and T<sub>2</sub><br><br></center></td>
-      </tr>
-    </table> 
-  </center>
-  <!-- Equilibrium -->
+          <th><center>Name</center></th>
+          <th><center>Formula</center></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><center>Zero-Order</center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;Rate&space;=&space;k"></center></td>
+          <td><center>Rate<br><br></center></td>
+        </tr>
+        <tr>
+          <td><center></center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;[A]=-kt\,&space;&plus;\,&space;[A]_{0}"></center></td>
+          <td><center>Integrated Rate Law<br></center>Plot: [A] vs. t<br>
+          Slope: -k<br>
+          Units: mole L<sup>-1</sup> sec<sup>-1</sup></td>
+        </tr>
+
+        <tr>
+          <td><center></center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;t_{1/2}=\frac{[A]_{0}}{2k}"></center></td>
+          <td><center>Half-Life</center></td>
+        </tr>
+        <tr>
+          <td><center>First-Order</center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;Rate&space;=&space;k[A]^{1}"></center></td>
+          <td><center>Rate<br><br></center></td>
+        </tr>
+        <tr>
+          <td><center></center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;ln[A]=-kt\,&space;&plus;\,&space;ln[A]_{0}"></center></td>
+          <td><center>Integrated Rate Law<br></center>Plot: ln[A] vs. t<br>
+          Slope: -k<br>
+          Units: sec<sup>-1</sup></td>
+        </tr>
+
+        <tr>
+          <td><center></center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;t_{1/2}=\frac{0.693}{k}"></center></td>
+          <td><center>Half-Life</center></td>
+        </tr>
+          <tr>
+          <td><center>Second-Order</center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;Rate&space;=&space;k[A]^{2}"></center></td>
+          <td><center>Rate<br><br></center></td>
+        </tr>
+        <tr>
+          <td><center></center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{1}{[A]}=kt\,&space;&plus;\,&space;\frac{1}{[A]_{0}}"></center></td>
+          <td><center>Integrated Rate Law<br></center>Plot: 1/[A] vs. t<br>
+          Slope: k<br>
+          Units: L mole<sup>-1</sup> sec<sup>-1</sup></td>
+        </tr>
+        <tr>
+          <td><center></center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;t&space;_{1/2}=\frac{1}{k[A]_{0}}"></center></td>
+          <td><center>Half-Life</center></td>
+        </tr>
+        <tr>
+          <td><center>Arrhenius Equation</center></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\large&space;k=zpe^{-E_{a}\RT}"></center></td>
+          <td><center>Accounts for proper molecular orientation and <br>energy needed in the collision for a reaction to occur.<br>
+          E<sub>a</sub> = Activation Energy</center></td>
+        </tr>      
+        <tr>
+          <td><center></center></td>
+          <td><center>&nbsp;&nbsp;<img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;ln(k)=-\frac{E_{a}}{R}(\frac{1}{T})\,&space;&plus;\,&space;ln(A)">&nbsp;&nbsp;</center></td>
+          <td>Plot: ln(k) vs. 1/T<br></td>
+        </tr>
+        <tr>
+          <td><center></center></td>
+          <td><center>&nbsp;&nbsp;<img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;ln(\frac{k_{2}}{k_{1}})=\frac{E_{a}}{R}(\frac{1}{T_{1}}\,&space;-\,&space;\frac{1}{T_{2}})">&nbsp;&nbsp;</center></td>
+          <td><center>k<sub>1</sub> and k<sub>2</sub> are measured at temperatures T<sub>1</sub> and T<sub>2</sub><br><br></center></td>
+        </tr>
+      </table> 
+    </center>
+    <!-- Equilibrium -->
   </div>
 </div>
 
 <!-- End Text -->
-{% endblock content %}
+{% endblock container %}
 
 <style>
 td {

@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Concentration - Thermodynamics
@@ -20,92 +20,81 @@ AP ChemHelp | Concentration - Thermodynamics
 {% endblock earlyStatic %}
 
 
-{% block content %}
+{% block container %}
     
-  <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
-            <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
-
 <!-- Text -->
 
-<div class="move">
 <div id="thermo" class="quizy-memorygame">
-<ul>
-  <li class="match1">
-    Activation Energy; <br>
-    E<sub>a</sub>
-  </li>
-  <li class="match1">
-    The amount of energy needed to reach the transition state, thus starting a chemical reaction.
-  </li>
-  <li class="match2">
-    First Law of Thermodynamics
-  </li>
-  <li class="match2"> 
-    The energy of the universe is constant.
-  </li>
-  <li class="match3">
-    Second Law of Thermodynamics
-  </li>
-  <li class="match3">
-    1) A process can only be spontaneous in one direction. <br>
-    2) The entropy of the universe always increases during spontaneous reactions.
-  </li>
-  <li class="match4">
-    Heat of Formation; <br>
-    &#916;H&#176;<sub>f</sub>
-  </li>
-  <li class="match4">
-    Change in energy that occurs when one mole of a compound is formed from its component pure elements under standard conditions.
-  </li>
-  <li class="match5">
-    Enthalpy Change; <br>
-    &#916;H
-  </li>
-  <li class="match5">
-    Measure of the energy that's released or absorbed when a chemical reaction occurs at standard pressure.
-  </li>
-  <li class="match6">
-    Exothermic
-  </li>
-  <li class="match6">
-    Type of reaction when a chemical reaction <i>releases</i> energy.
-  </li>  
-  <li class="match7">
-    Endothermic
-  </li>
-  <li class="match7">
-    Type of reaction when a chemical reaction <i>absorbs</i> energy.
-  </li>
-  <li class="match8">
-    Heat Capactiy; <br>
-    C<sub>p</sub>
-  </li>
-  <li class="match8"> 
-    Measure of how much an object's temperature is raised when it absorbs heat.
-  </li>
-  <li class="match9">
-    Specific Heat; <br>
-    c
-  </li>
-  <li class="match9">
-    Amount of heat needed to raise the temperature of 1 gram of a substance by 1&#176;<sup>C</sup>.
-  </li>
-  <li class="match10">
-    Entropy; <br>
-    S
-  </li>
-  <li class="match10">
-    Measure of randomness or disorder of the system. <br>
-    The greater the disorder, the greater its ___ .
-  </li>
-</ul>
-</div>
+  <ul>
+    <li class="match1">
+      Activation Energy; <br>
+      E<sub>a</sub>
+    </li>
+    <li class="match1">
+      The amount of energy needed to reach the transition state, thus starting a chemical reaction.
+    </li>
+    <li class="match2">
+      First Law of Thermodynamics
+    </li>
+    <li class="match2"> 
+      The energy of the universe is constant.
+    </li>
+    <li class="match3">
+      Second Law of Thermodynamics
+    </li>
+    <li class="match3">
+      1) A process can only be spontaneous in one direction. <br>
+      2) The entropy of the universe always increases during spontaneous reactions.
+    </li>
+    <li class="match4">
+      Heat of Formation; <br>
+      &#916;H&#176;<sub>f</sub>
+    </li>
+    <li class="match4">
+      Change in energy that occurs when one mole of a compound is formed from its component pure elements under standard conditions.
+    </li>
+    <li class="match5">
+      Enthalpy Change; <br>
+      &#916;H
+    </li>
+    <li class="match5">
+      Measure of the energy that's released or absorbed when a chemical reaction occurs at standard pressure.
+    </li>
+    <li class="match6">
+      Exothermic
+    </li>
+    <li class="match6">
+      Type of reaction when a chemical reaction <i>releases</i> energy.
+    </li>  
+    <li class="match7">
+      Endothermic
+    </li>
+    <li class="match7">
+      Type of reaction when a chemical reaction <i>absorbs</i> energy.
+    </li>
+    <li class="match8">
+      Heat Capactiy; <br>
+      C<sub>p</sub>
+    </li>
+    <li class="match8"> 
+      Measure of how much an object's temperature is raised when it absorbs heat.
+    </li>
+    <li class="match9">
+      Specific Heat; <br>
+      c
+    </li>
+    <li class="match9">
+      Amount of heat needed to raise the temperature of 1 gram of a substance by 1&#176;<sup>C</sup>.
+    </li>
+    <li class="match10">
+      Entropy; <br>
+      S
+    </li>
+    <li class="match10">
+      Measure of randomness or disorder of the system. <br>
+      The greater the disorder, the greater its ___ .
+    </li>
+  </ul>
 </div>
 
 <script>
@@ -124,7 +113,7 @@ $('#thermo').quizyMemoryGame(
 </script>
 
 <!-- End Text -->
-{% endblock content %}
+{% endblock container %}
 
 
 {% block lateStatic %}

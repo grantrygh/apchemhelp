@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Gas Formulas
@@ -15,116 +15,105 @@ AP ChemHelp | Gas Formulas
 {% endblock earlyStatic %}
 
 
-{% block content %}
-    
-  <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
-            <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
+{% block container %}
 
 <!-- Text -->
 
 <div class="flowpanes" id="flowpanes">
-
   <div>
-  <h3><center>Gases</center></h3>
-  <!-- Gases -->
-  <center>
-    <table border="1" id="gases">
-        <th>Name</th>
-        <th>Formula</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Boyle&#39;s Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;P_{1}V_{1}=&space;P_{2}V_{2}"></center></td>
-        <td>As the volume of a gas increases, pressure decreases (vice-versa), as long as mass and temperature remain constant.</td>
-      </tr>
-      <tr>
-        <td>Charles&#39; Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;V_{1}T_{2}=V_{2}T_{1}"></center></td>
-        <td>As the temperature of a gas increases, volume increases (vice-versa), as long as mass and pressure remain constant.</td>
-      </tr>
-      <tr>
-        <td>Gay-Lussac&#39;s Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;P_{1}T_{2}=P_{2}T_{1}"></center></td>
-        <td>As the temperature of a gas increases, pressure increases (vice-versa), as long as mass and volume remain constant.</td>
-      </tr>
-      <tr>
-        <td>Combined Gas Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{P_{1}V_{1}}{T_{1}}&space;=&space;\frac{P_{2}V_{2}}{T_{2}}"></center></td>
-        <td>Rearrangement of Charles&#39; and Boyle&#39;s Laws.</td>
-      </tr>
-      <tr>
-        <td>Avogadro&#39;s Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{V_{1}}{n_{1}}&space;=&space;\frac{V_{2}}{n_{2}}"></center></td>
-        <td>As the amount of moles of a gas increases, volume increases (vice-versa), as  long as pressure and temperature remain constant.</td>
-      </tr>
-      <tr>
-        <td>Ideal Gas Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;PV&space;=&space;nRT"></center></td>
-        <td>n = Number of moles, 
-          R = Gas constant <img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\small&space;R&space;=8.31&space;\frac{L\cdot&space;kPa}{moles\cdot&space;K}=&space;.0821\frac{L\cdot&space;atm}{moles\cdot&space;K}=62.4\frac{L\cdot&space;mmHg}{moles\cdot&space;K}">
-        </td>
-      </tr>
-      <tr>
-        <td>Density/Molar Mass</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;mmP&space;=&space;dRT"></center></td>
-        <td><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\small&space;mm&space;=&space;Molar\:Mass\:(in\:grams);\:\:d&space;=&space;density\:(\:\frac{grams}{Liter}\:)"></td>
-      </tr>
-      <tr>
-        <td>Graham&#39;s Law of Effusion</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{Rate_{Gas&space;A}}{Rate_{Gas&space;B}}=&space;\frac{\sqrt{Molar&space;\,Mass_{Gas&space;B}}}{\sqrt{Molar\,Mass_{Gas&space;A}}}"></center></td>
-        <td>The lighter gas will diffuse more than the heavier gas.</td>
-      </tr>
-      <tr>
-        <td>Root Mean Square Velocity</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;U_{rms}=&space;\sqrt{\frac{3RT}{M}}"></center></td>
-       <td><center>U<sub>rms</sub> = Root Mean Square <br> <img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\small&space;R=8.3145\,(\frac{J}{K\cdot&space;mol})"><br>
-        M = Molar Mass (kilograms)
-        </center></td>
-      </tr>
-      <tr>
-        <td>Dalton&#39;s Law</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;P_{total}=p_{1}&space;&plus;&space;p_{2}\:...\:&plus;p_{n}"></center>
-        </td>
-        <td>The total pressure of a mixture of gases is equal to the sum of the partial pressures of the component gases.</td>
-      </tr>
-      <tr>
-        <td>Mole Fraction</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\chi_{a}=\frac{n_{a}}{n_{tot}}"></center></td>
-        <td>Ratio of moles of gas A to the total number of moles of all components.</td>
-      </tr>
-      <tr>
-        <td>Van der Waal&#39;s Equation</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\(P\,&plus;\,\frac{n^{2}a}{V^{2}})\cdot(V-nb)=&space;nRT"></center></td>
-        <td>Corrects the Ideal Gas Law for the volume of, and attractive forces between, gas molecules.  a corrects pressure, taking into account molecular interactions.  b corrects volume, as molecules in real gases have volume and take up space. <a href="http://en.wikipedia.org/wiki/Van_der_Waals_constants_(data_page)" style="color: blue">(Wiki a and b values)</a></td>
-      </tr>
-      <tr>
-        <td>Standard Pressures</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;1\,atm&space;=&space;760\,mmHg&space;=&space;101.325\,kPa"></center></td>
-        <td>Condition used to compare experimental results from different places.</td>
-      </tr>
-      <tr>
-        <td>Standard Temperatures</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;0.0^{\circ}C&space;=&space;32.0^{\circ}F&space;=&space;273K"></center></td>
-        <td>Condition used to compare experimental results from different places.</td>
-      </tr>
+    <h3><center>Gases</center></h3>
+    <!-- Gases -->
+    <center>
+      <table border="1" id="gases">
+          <th>Name</th>
+          <th>Formula</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Boyle&#39;s Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;P_{1}V_{1}=&space;P_{2}V_{2}"></center></td>
+          <td>As the volume of a gas increases, pressure decreases (vice-versa), as long as mass and temperature remain constant.</td>
+        </tr>
+        <tr>
+          <td>Charles&#39; Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;V_{1}T_{2}=V_{2}T_{1}"></center></td>
+          <td>As the temperature of a gas increases, volume increases (vice-versa), as long as mass and pressure remain constant.</td>
+        </tr>
+        <tr>
+          <td>Gay-Lussac&#39;s Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;P_{1}T_{2}=P_{2}T_{1}"></center></td>
+          <td>As the temperature of a gas increases, pressure increases (vice-versa), as long as mass and volume remain constant.</td>
+        </tr>
+        <tr>
+          <td>Combined Gas Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{P_{1}V_{1}}{T_{1}}&space;=&space;\frac{P_{2}V_{2}}{T_{2}}"></center></td>
+          <td>Rearrangement of Charles&#39; and Boyle&#39;s Laws.</td>
+        </tr>
+        <tr>
+          <td>Avogadro&#39;s Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{V_{1}}{n_{1}}&space;=&space;\frac{V_{2}}{n_{2}}"></center></td>
+          <td>As the amount of moles of a gas increases, volume increases (vice-versa), as  long as pressure and temperature remain constant.</td>
+        </tr>
+        <tr>
+          <td>Ideal Gas Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;PV&space;=&space;nRT"></center></td>
+          <td>n = Number of moles, 
+            R = Gas constant <img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\small&space;R&space;=8.31&space;\frac{L\cdot&space;kPa}{moles\cdot&space;K}=&space;.0821\frac{L\cdot&space;atm}{moles\cdot&space;K}=62.4\frac{L\cdot&space;mmHg}{moles\cdot&space;K}">
+          </td>
+        </tr>
+        <tr>
+          <td>Density/Molar Mass</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;mmP&space;=&space;dRT"></center></td>
+          <td><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\small&space;mm&space;=&space;Molar\:Mass\:(in\:grams);\:\:d&space;=&space;density\:(\:\frac{grams}{Liter}\:)"></td>
+        </tr>
+        <tr>
+          <td>Graham&#39;s Law of Effusion</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{Rate_{Gas&space;A}}{Rate_{Gas&space;B}}=&space;\frac{\sqrt{Molar&space;\,Mass_{Gas&space;B}}}{\sqrt{Molar\,Mass_{Gas&space;A}}}"></center></td>
+          <td>The lighter gas will diffuse more than the heavier gas.</td>
+        </tr>
+        <tr>
+          <td>Root Mean Square Velocity</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;U_{rms}=&space;\sqrt{\frac{3RT}{M}}"></center></td>
+         <td><center>U<sub>rms</sub> = Root Mean Square <br> <img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\small&space;R=8.3145\,(\frac{J}{K\cdot&space;mol})"><br>
+          M = Molar Mass (kilograms)
+          </center></td>
+        </tr>
+        <tr>
+          <td>Dalton&#39;s Law</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;\large&space;P_{total}=p_{1}&space;&plus;&space;p_{2}\:...\:&plus;p_{n}"></center>
+          </td>
+          <td>The total pressure of a mixture of gases is equal to the sum of the partial pressures of the component gases.</td>
+        </tr>
+        <tr>
+          <td>Mole Fraction</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\chi_{a}=\frac{n_{a}}{n_{tot}}"></center></td>
+          <td>Ratio of moles of gas A to the total number of moles of all components.</td>
+        </tr>
+        <tr>
+          <td>Van der Waal&#39;s Equation</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\(P\,&plus;\,\frac{n^{2}a}{V^{2}})\cdot(V-nb)=&space;nRT"></center></td>
+          <td>Corrects the Ideal Gas Law for the volume of, and attractive forces between, gas molecules.  a corrects pressure, taking into account molecular interactions.  b corrects volume, as molecules in real gases have volume and take up space. <a href="http://en.wikipedia.org/wiki/Van_der_Waals_constants_(data_page)" style="color: blue">(Wiki a and b values)</a></td>
+        </tr>
+        <tr>
+          <td>Standard Pressures</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;1\,atm&space;=&space;760\,mmHg&space;=&space;101.325\,kPa"></center></td>
+          <td>Condition used to compare experimental results from different places.</td>
+        </tr>
+        <tr>
+          <td>Standard Temperatures</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\inline&space;\fn_jvn&space;0.0^{\circ}C&space;=&space;32.0^{\circ}F&space;=&space;273K"></center></td>
+          <td>Condition used to compare experimental results from different places.</td>
+        </tr>
 
-    </table> 
-  </center>
-  <!-- Gases -->
-
+      </table> 
+    </center>
+    <!-- Gases -->
   </div>
 </div>
 
 
 <!-- End Text -->
-{% endblock content %}
+{% endblock container %}
 
 <style>
 td {

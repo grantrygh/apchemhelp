@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Concentration - Periodic Structure
@@ -20,84 +20,73 @@ AP ChemHelp | Concentration - Periodic Structure
 {% endblock earlyStatic %}
 
 
-{% block content %}
+{% block container %}
     
-  <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
-            <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
-
 <!-- Text -->
 
-<div class="move">
 <div id="perStr" class="quizy-memorygame">
-<ul>
-  <li class="match1">
-    Aufbau Principle
-  </li>
-  <li class="match1">
-    States that electrons are placed in orbitals, subshells, and shells in order of increasing energy when building up the electron configuration.
-  </li>
-  <li class="match2">
-    Pauli Exclusion Principle
-  </li>
-  <li class="match2"> 
-    States that no two electrons can have the same set of quantum numbers within an atom.
-  </li>
-  <li class="match3">
-    Periods
-  </li>
-  <li class="match3">
-    Horizontal rows of the periodic table.
-  </li>
-  <li class="match4">
-    Groups
-  </li>
-  <li class="match4">
-    Vertical columns of the periodic table.
-  </li>
-  <li class="match5">
-    Rutherford's "Gold Foil" Experiment
-  </li>
-  <li class="match5">
-    Concluded that all of the positive charge in an atom was concentrated at the center.
-  </li>
-  <li class="match6">
-    Heisenberg's Uncertainty Principle
-  </li>
-  <li class="match6">
-    States that the exact position and momentum of a particle cannot be simultaneously known
-  </li>  
-  <li class="match7">
-    Quantum Numbers
-  </li>
-  <li class="match7">
-    Describes the positions of the electrons in relation to the nucleus by its shell, subshell, orbital, and spin.
-  </li>
-  <li class="match8">
-    Atomic Radius
-  </li>
-  <li class="match8"> 
-    Approximate distance from an atom's nucleus to its valence electrons (Greatest at bottom-left of periodic table).
-  </li>
-  <li class="match9">
-    Ionization Energy
-  </li>
-  <li class="match9">
-    The energy required to remove an electron from an atom (Greatest at top-right of periodic table).
-  </li>
-  <li class="match10">
-    Dmitri Mendeleev
-  </li>
-  <li class="match10">
-    Creator of the Periodic Table of Elements.
-  </li>
-</ul>
-</div>
+  <ul>
+    <li class="match1">
+      Aufbau Principle
+    </li>
+    <li class="match1">
+      States that electrons are placed in orbitals, subshells, and shells in order of increasing energy when building up the electron configuration.
+    </li>
+    <li class="match2">
+      Pauli Exclusion Principle
+    </li>
+    <li class="match2"> 
+      States that no two electrons can have the same set of quantum numbers within an atom.
+    </li>
+    <li class="match3">
+      Periods
+    </li>
+    <li class="match3">
+      Horizontal rows of the periodic table.
+    </li>
+    <li class="match4">
+      Groups
+    </li>
+    <li class="match4">
+      Vertical columns of the periodic table.
+    </li>
+    <li class="match5">
+      Rutherford's "Gold Foil" Experiment
+    </li>
+    <li class="match5">
+      Concluded that all of the positive charge in an atom was concentrated at the center.
+    </li>
+    <li class="match6">
+      Heisenberg's Uncertainty Principle
+    </li>
+    <li class="match6">
+      States that the exact position and momentum of a particle cannot be simultaneously known
+    </li>  
+    <li class="match7">
+      Quantum Numbers
+    </li>
+    <li class="match7">
+      Describes the positions of the electrons in relation to the nucleus by its shell, subshell, orbital, and spin.
+    </li>
+    <li class="match8">
+      Atomic Radius
+    </li>
+    <li class="match8"> 
+      Approximate distance from an atom's nucleus to its valence electrons (Greatest at bottom-left of periodic table).
+    </li>
+    <li class="match9">
+      Ionization Energy
+    </li>
+    <li class="match9">
+      The energy required to remove an electron from an atom (Greatest at top-right of periodic table).
+    </li>
+    <li class="match10">
+      Dmitri Mendeleev
+    </li>
+    <li class="match10">
+      Creator of the Periodic Table of Elements.
+    </li>
+  </ul>
 </div>
 
 <script>
@@ -116,7 +105,7 @@ $('#perStr').quizyMemoryGame(
 </script>
 
 <!-- End Text -->
-{% endblock content %}
+{% endblock container %}
 
 
 {% block lateStatic %}

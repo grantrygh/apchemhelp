@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Concentration - Acid/Base
@@ -20,84 +20,73 @@ AP ChemHelp | Concentration - Acid/Base
 {% endblock earlyStatic %}
 
 
-{% block content %}
-    
-  <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
-            <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
+{% block container %}
 
 <!-- Text -->
-<div class="move">
 <div id="acids" class="quizy-memorygame">
-<ul>
-  <li class="match1">
-    Polyprotic Acids
-  </li>
-  <li class="match1">
-    Acids that can give up more than one hydrogen ion in a solution.
-  </li>
-  <li class="match2">
-    Amphoteric 
-  </li>
-  <li class="match2"> 
-    Substances that can either act as an acid or a base.
-  </li>
-  <li class="match3">
-    Equivalence Point
-  </li>
-  <li class="match3">
-    Point in titration when exactly enough base has been added to neutralize all of the acid (vice-versa).
-  </li>
-  <li class="match4">
-    Strong Acids
-  </li>
-  <li class="match4">
-    HCl, HBr, HI, HNO<sub>3</sub>, HClO<sub>4</sub>, HClO<sub>3</sub>, H<sub>2</sub>SO<sub>4</sub>.
-  </li>
-  <li class="match5">
-    Strong Bases
-  </li>
-  <li class="match5">
-    LiOH, NaOH, KOH, Ba(OH)<sub>2</sub>, Sr(OH)<sub>2</sub>.
-  </li>
-  <li class="match6">
-    Arrhenius Acid/Base
-  </li>
-  <li class="match6">
-    Substance that ionizes in water and produces hydrogen/hydroxide ions.
-  </li>  
-  <li class="match7">
-    Bronsted-Lowry Acid/Base
-  </li>
-  <li class="match7">
-    Substance that is capable of donating/accepting a hydrogen ion.
-  </li>
-  <li class="match8">
-    Lewis Acid/Base
-  </li>
-  <li class="match8"> 
-    Substance that is an electron pair acceptor/donor.
-  </li>
-  <li class="match9">
-    Common Ion Effect
-  </li>
-  <li class="match9">
-    A weak acid and its conjugate base (or weak base and its conjugate acid) can remain in solution together without neutralizing each other.
-  </li>
-  <li class="match10">
-    Buffer
-  </li>
-  <li class="match10">
-    Solution with a very stable pH
-  </li>
-</ul>
-</div>
-</div>
+  <ul>
+    <li class="match1">
+      Polyprotic Acids
+    </li>
+    <li class="match1">
+      Acids that can give up more than one hydrogen ion in a solution.
+    </li>
+    <li class="match2">
+      Amphoteric 
+    </li>
+    <li class="match2"> 
+      Substances that can either act as an acid or a base.
+    </li>
+    <li class="match3">
+      Equivalence Point
+    </li>
+    <li class="match3">
+      Point in titration when exactly enough base has been added to neutralize all of the acid (vice-versa).
+    </li>
+    <li class="match4">
+      Strong Acids
+    </li>
+    <li class="match4">
+      HCl, HBr, HI, HNO<sub>3</sub>, HClO<sub>4</sub>, HClO<sub>3</sub>, H<sub>2</sub>SO<sub>4</sub>.
+    </li>
+    <li class="match5">
+      Strong Bases
+    </li>
+    <li class="match5">
+      LiOH, NaOH, KOH, Ba(OH)<sub>2</sub>, Sr(OH)<sub>2</sub>.
+    </li>
+    <li class="match6">
+      Arrhenius Acid/Base
+    </li>
+    <li class="match6">
+      Substance that ionizes in water and produces hydrogen/hydroxide ions.
+    </li>  
+    <li class="match7">
+      Bronsted-Lowry Acid/Base
+    </li>
+    <li class="match7">
+      Substance that is capable of donating/accepting a hydrogen ion.
+    </li>
+    <li class="match8">
+      Lewis Acid/Base
+    </li>
+    <li class="match8"> 
+      Substance that is an electron pair acceptor/donor.
+    </li>
+    <li class="match9">
+      Common Ion Effect
+    </li>
+    <li class="match9">
+      A weak acid and its conjugate base (or weak base and its conjugate acid) can remain in solution together without neutralizing each other.
+    </li>
+    <li class="match10">
+      Buffer
+    </li>
+    <li class="match10">
+      Solution with a very stable pH
+    </li>
+  </ul>
+</div> <!-- memorygame -->
 
 <script>
 $('#acids').quizyMemoryGame(
@@ -115,7 +104,7 @@ $('#acids').quizyMemoryGame(
 </script>
 
 <!-- End Text -->
-{% endblock content %}
+{% endblock container %}
 
 
 {% block lateStatic %}

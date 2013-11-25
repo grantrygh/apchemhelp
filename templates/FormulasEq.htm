@@ -1,4 +1,4 @@
-{% extends "sidebarbase.html" %}
+{% extends "basetwo.html" %}
 
 {% block title %}
 AP ChemHelp | Equilibrium Formulas
@@ -14,98 +14,89 @@ AP ChemHelp | Equilibrium Formulas
 {% endblock earlyStatic %}
 
 
-{% block content %}
+{% block container %}
     
-  <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-lg-9">
-          <p class="pull-right hidden-lg">
-            <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-          </p>
-          <div class="jumbotron">
-
 <!-- Text -->
 
 <div class="flowpanes" id="flowpanes">
   <div>
-  <h3><center>Equilibrium Formulas</center></h3>
+    <h3><center>Equilibrium Formulas</center></h3>
+      <!-- Equilibrium -->
+      <center>
+      <table border="1" id="acidsbases">
+        <tr>
+          <th>Name</th>
+          <th>Formula</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>pH</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pH&space;=&space;-log\,&space;[\,&space;H^{&plus;}\,&space;]"></center></td>
+          <td>[H+] is the hydrogen ion concentration, measured in moles per liter (Molarity)</td>
+        </tr>
+        <tr>
+          <td>pOH</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pOH&space;=&space;-log\,&space;[\,&space;OH^{-}\,&space;]"></center></td>
+          <td>[OH-] is the hydroxide ion concentration, measured in moles per liter (Molarity)</td>
+        </tr>
+        <tr>
+          <td><br><br></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pH&space;\;&space;&plus;&space;\;&space;pOH&space;\,&space;=&space;\,&space;14.00"></center></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Acid-Base Titration</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;V_{a}M_{a}\,&space;=&space;\,&space;V_{b}M_{b}"></center></td>
+          <td>Used in titrations to determine a volume or concentration of an acid or base.  a and b refer to "acid" and "base", and M = Concentration (Molarity)</td>
+        </tr>
+        <tr>
+          <td>Henderson-Hasselbach Equation</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pH&space;=&space;pK_{a}\,&space;&plus;&space;\,&space;log\,&space;\frac{[\&space;A^{-}\&space;]}{[\&space;HA\&space;]}"></center></td>
+          <td>Useful for estimating the pH of a buffer solution and finding the equilibrium pH in acid-base reactions</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pOH&space;=&space;pK_{b}\,&space;&plus;&space;\,&space;log\,&space;\frac{[\&space;HB^{&plus;}\&space;]}{[\&space;B\&space;]}"></center></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>pKa<br><br></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pK_{a}\,&space;=&space;\,&space;-log\,K_{a}"></center></td>
+          <td>Acid Dissociation Constant.</td>
+        </tr>
+        <tr>
+          <td>pKb<br><br></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pK_{b}\,&space;=&space;\,&space;-log\,K_{b}"></center></td>
+          <td>Base Dissociation Constant.</td>
+        </tr>
+        <tr>
+          <td>Ka</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;K_{a}\,&space;=&space;\frac{\,&space;[H^{-}]\;&space;[A^{-}]}{[\,&space;HA\,&space;]}"></center></td>
+          <td>Equilibrium constant for a weak acid. <br> HA = Generic acid <br>  A<sup>-</sup> = Conjugate base of the acid <br> H<sup>+</sup> = Hydrogen ion</td>
+        </tr>
+        <tr>
+          <td>Kb</td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;K_{b}\,&space;=&space;\frac{\,&space;[OH^{-}]\;&space;[HB^{&plus;}]}{[\,&space;B\,&space;]}"></center></td>
+          <td>Equilibrium constant for a weak base.<br>  B = Generic base <br>  HB<sup>+</sup> = Conjugate acid  of the base <br> OH<sup>-</sup> = Hydroxide ion</td>
+        </tr>
+        <tr>
+          <td>Kw<br><br></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;K_{w}\,&space;=\,&space;[OH^{-}]\;&space;[H^{&plus;}]\,&space;=&space;\,&space;1.0&space;\cdot&space;10^{-14}"></center></td>
+          <td><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\small&space;At&space;\;&space;25^{\circ}C.">  Equilibrium constant for water.</td>
+        </tr>
+        <tr>
+          <td><br><br></td>
+          <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;K_{w}\,&space;=\,&space;K_{a}\,\cdot&space;\,&space;K_{b}"></center></td>
+          <td></td>
+        </tr>
+      </table> 
+    </center>
     <!-- Equilibrium -->
-    <center>
-    <table border="1" id="acidsbases">
-      <tr>
-        <th>Name</th>
-        <th>Formula</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>pH</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pH&space;=&space;-log\,&space;[\,&space;H^{&plus;}\,&space;]"></center></td>
-        <td>[H+] is the hydrogen ion concentration, measured in moles per liter (Molarity)</td>
-      </tr>
-      <tr>
-        <td>pOH</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pOH&space;=&space;-log\,&space;[\,&space;OH^{-}\,&space;]"></center></td>
-        <td>[OH-] is the hydroxide ion concentration, measured in moles per liter (Molarity)</td>
-      </tr>
-      <tr>
-        <td><br><br></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pH&space;\;&space;&plus;&space;\;&space;pOH&space;\,&space;=&space;\,&space;14.00"></center></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Acid-Base Titration</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;V_{a}M_{a}\,&space;=&space;\,&space;V_{b}M_{b}"></center></td>
-        <td>Used in titrations to determine a volume or concentration of an acid or base.  a and b refer to "acid" and "base", and M = Concentration (Molarity)</td>
-      </tr>
-      <tr>
-        <td>Henderson-Hasselbach Equation</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pH&space;=&space;pK_{a}\,&space;&plus;&space;\,&space;log\,&space;\frac{[\&space;A^{-}\&space;]}{[\&space;HA\&space;]}"></center></td>
-        <td>Useful for estimating the pH of a buffer solution and finding the equilibrium pH in acid-base reactions</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pOH&space;=&space;pK_{b}\,&space;&plus;&space;\,&space;log\,&space;\frac{[\&space;HB^{&plus;}\&space;]}{[\&space;B\&space;]}"></center></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>pKa<br><br></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pK_{a}\,&space;=&space;\,&space;-log\,K_{a}"></center></td>
-        <td>Acid Dissociation Constant.</td>
-      </tr>
-      <tr>
-        <td>pKb<br><br></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;pK_{b}\,&space;=&space;\,&space;-log\,K_{b}"></center></td>
-        <td>Base Dissociation Constant.</td>
-      </tr>
-      <tr>
-        <td>Ka</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;K_{a}\,&space;=&space;\frac{\,&space;[H^{-}]\;&space;[A^{-}]}{[\,&space;HA\,&space;]}"></center></td>
-        <td>Equilibrium constant for a weak acid. <br> HA = Generic acid <br>  A<sup>-</sup> = Conjugate base of the acid <br> H<sup>+</sup> = Hydrogen ion</td>
-      </tr>
-      <tr>
-        <td>Kb</td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;K_{b}\,&space;=&space;\frac{\,&space;[OH^{-}]\;&space;[HB^{&plus;}]}{[\,&space;B\,&space;]}"></center></td>
-        <td>Equilibrium constant for a weak base.<br>  B = Generic base <br>  HB<sup>+</sup> = Conjugate acid  of the base <br> OH<sup>-</sup> = Hydroxide ion</td>
-      </tr>
-      <tr>
-        <td>Kw<br><br></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;K_{w}\,&space;=\,&space;[OH^{-}]\;&space;[H^{&plus;}]\,&space;=&space;\,&space;1.0&space;\cdot&space;10^{-14}"></center></td>
-        <td><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\small&space;At&space;\;&space;25^{\circ}C.">  Equilibrium constant for water.</td>
-      </tr>
-      <tr>
-        <td><br><br></td>
-        <td><center><img src="http://latex.codecogs.com/png.latex?\fn_jvn&space;\inline&space;\large&space;K_{w}\,&space;=\,&space;K_{a}\,\cdot&space;\,&space;K_{b}"></center></td>
-        <td></td>
-      </tr>
-    </table> 
-  </center>
-  <!-- Equilibrium -->
   </div>
 </div>
 
 <!-- End Text -->
-{% endblock content %}
+{% endblock container %}
 
 <style>
 td {
