@@ -14,7 +14,7 @@ AP ChemHelp | Contact
 {% endblock earlyStatic %}
 
 
-{% block container %}
+{% block content %}
 
   <div class="container">
 
@@ -50,7 +50,7 @@ AP ChemHelp | Contact
     <input name="subject" size="64" maxlength="64"/>
 
     Message
-    <textarea name="body" rows="10" cols="60"></textarea>
+    <textarea id="contacttextarea" name="body" rows="10" cols="60"></textarea>
 
     <input type="submit" name="submit" value="Send Your Message"/>
 
@@ -60,7 +60,7 @@ AP ChemHelp | Contact
 
 <br><br><br><br>
 
-{% endblock container %}
+{% endblock content %}
 
 
 {% block lateStatic %}
