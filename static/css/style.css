@@ -189,7 +189,7 @@ input .titration-input{
     font-size:0.9em;
     color:#3a3a3a;
 }
-textarea {
+textarea.titrationtext {
     width:48%;
     background:#efefef;
     border:1px solid #dedede;
