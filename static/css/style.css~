@@ -66,10 +66,7 @@
 .boxed{
 	margin: 35px;
 }
-.col-lg-4 {
-text-align: right;
-}
-.ph-row{margin-top: 3%; margin-left: 50px;}
+.ph-row{margin-top: 20px;}
 .btn-cstm{text-align: center;}
 .tcontainer-outer{background-color: #EFEFEF;}
 .tcontainer-inner{margin-left: 15px; margin-top: 10px;}
@@ -190,12 +187,13 @@ input .titration-input{
     color:#3a3a3a;
 }
 textarea {
-    width:48%;
+    width:45%;
+    height:40px;
     background:#efefef;
     border:1px solid #dedede;
     padding:10px;
-    margin-top:3%;
-    font-size:2.0em;
+    margin-top:3px;
+    font-size:0.9em;
     color:#3a3a3a;
     border-radius:5px;
     -moz-border-radius:5px;
@@ -203,7 +201,7 @@ textarea {
 }
 
 textarea {
-  height:150px;
+  height:200px;
 }
 input:focus, textarea:focus {
     border:1px solid #97d6eb;
@@ -219,6 +217,4 @@ input:focus, textarea:focus {
 #submit:hover {
     opacity:0.9;
 }
-
-
 

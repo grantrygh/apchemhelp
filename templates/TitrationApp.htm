@@ -22,7 +22,7 @@ AP ChemHelp | Mass Calculator
           </div>
           <div class="col-lg-4">
             <button type="button" class="btn btn-primary btn-offcanvas" data-toggle="offcanvas"><i class="glyphicon glyphicon-resize-horizontal"></i></button>
-            <a href="#" onClick="help()"><span class="badge badge-info"><b>?</b></span></a>
+            <a href="#" onClick="help()"><span id="helpbutton" class="badge badge-info"><b>?</b></span></a>
           </div>
         </div>
 
@@ -205,15 +205,15 @@ AP ChemHelp | Mass Calculator
           </span>
         </div>  <!-- end row -->
 
-
+        <center>
         <div class="row ph-row">
           pH: 
-          <input type="text" name="blank" id="desPH" placeholder="Desired pH" style="border: 1px solid" onClick='option("pH")' onblur="removeLetters('desPH')">
-          <input type="radio" name="same" id="neutral" onClick='option("eqpoint")'> Neutralization / Equivalence
+          <input type="text" name="blank" id="desPH" placeholder="Desired pH" style="border: 1px solid" onClick='option("pH")' onblur="removeLetters('desPH')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="same" id="neutral" onClick='option("eqpoint")'> Neutralization / Equivalence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="radio" name="same" id="mid" onClick='option("midpoint")'> Midpoint
         </div>  <!-- end row -->
-
-
+        </center>
+        <br>
 
         <div class="row btn-cstm">
           <input type="button" class="btn btn-default" onClick="Button()" value="Calculate"></input>
