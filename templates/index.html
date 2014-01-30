@@ -10,22 +10,23 @@ AP ChemHelp | High School Chemistry Help, Calculators, Formulas
 <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="{{ STATIC_URL }}css/offcanvas.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
 {% endblock earlyStatic %}
 
 
 {% block content %}
 
 <div class="container">
-<br><br>
+	  <br><br>
       <div class="jumbotron">
         <h2><b><center>Tools for AP Chemistry</center></b></h2>
       </div>
-
+	  <br>
       <div class="body-content">
 
         <!-- Example row of columns -->
         <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-3 left-border right-border">
               <center><h2>Titration Calculator</h2></center>
               <p>Multi-functional calculator to assist you with titration problems when finding...
                 <ul>
@@ -36,28 +37,31 @@ AP ChemHelp | High School Chemistry Help, Calculators, Formulas
                 </ul>
               </p>
               <br>
-              <p><a class="btn btn-default" href="/calculator/titration/">Go to &raquo;</a></p>
-            </div><!--/span-->
+              <p><a class="btn btn-default btn-block" href="/calculator/titration/">Titration Calculator &raquo;</a></p>
+            </div><!--/div-->
             <div class="col-sm-6 col-lg-3">
               <center><h2>Mass Calculator</h2></center>
               <p>Calculate the mass of simple elements, to complex compound formulas with this handy calculator!</p>
-              <p><a class="btn btn-default" href="/calculator/mass/">Go to &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-sm-6 col-lg-3">
+              <br>
+              <p><a class="btn btn-default btn-block" href="/calculator/mass/">Mass Calculator &raquo;</a></p>
+            </div><!--/div-->
+            <div class="col-sm-6 col-lg-3 left-border right-border">
               <center><h2>Concentration Game</h2></center>
-              <p>Test your chemistry vocabulary skills with a game of Concentration! <br> Select one of the below categories to begin. </p>
-              <a href="/flashcard/acidbase/">Acids and Bases</a><br>
-              <a href="/flashcard/periodic/">Periodic Structure</a><br>
-              <a href="/flashcard/thermo/">Thermodynamics</a>
-            </div><!--/span-->
-            <div class="col-sm-6 col-lg-3">
+              <p>Test your chemistry vocabulary skills with a game of Concentration! <br> Select a category to begin. </p>
+              <br>
+              <a class="btn btn-default btn-block" href="/flashcard/acidbase/">Acids and Bases</a>
+              <a class="btn btn-default btn-block" href="/flashcard/periodic/">Periodic Structure</a>
+              <a class="btn btn-default btn-block" href="/flashcard/thermo/">Thermodynamics</a><br>
+            </div><!--/div-->
+            <div class="col-sm-6 col-lg-3 right-border">
               <center><h2>Formulas</h2></center>
               <p>A list of common chemistry formulas placed together for your convenience! <br> Formulas are separated by category.</p>
-              <a href="/formulas/gases/">Gases</a><br>
-              <a href="/formulas/equilibrium/">Equilibrium</a><br>
-              <a href="/formulas/thermo/">Thermodynamics</a><br>
-              <a href="/formulas/kinetics/">Kinetics</a>
-            </div><!--/span-->
+              <br>
+              <a class="btn btn-default btn-block" href="/formulas/gases/">Gases</a>
+              <a class="btn btn-default btn-block" href="/formulas/equilibrium/">Equilibrium</a>
+              <a class="btn btn-default btn-block" href="/formulas/thermo/">Thermodynamics</a>
+              <a class="btn btn-default btn-block" href="/formulas/kinetics/">Kinetics</a><br>
+            </div><!--/div-->
         </div>
         
 {% endblock content %}

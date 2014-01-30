@@ -905,6 +905,10 @@ pre code {
   }
   .col-sm-6 {
     width: 50%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 15px;
+
   }
   .col-sm-7 {
     width: 58.333333333333336%;
@@ -1699,7 +1703,7 @@ select.input-small {
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.428571429;
+  line-height: 0.89;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;

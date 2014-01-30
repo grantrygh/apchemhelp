@@ -3,7 +3,12 @@
 .nav{text-align: center;}
 .nav-item{margin: 0; padding: 0; line-height: 0;}
 
-
+.left-border{
+  border-left: 1px solid;
+}
+.right-border{
+  border-right: 1px solid;
+}
 
 
 /* About Page */
