@@ -212,5 +212,28 @@ input:focus, textarea:focus {
     opacity:0.9;
 }
 
+html,body{
+    height: 100%
+}
 
+#holder{
+    min-height: 100%;
+    position:relative;
+}
 
+#bod{
+    padding-bottom: 60px;    /* height of footer */
+}
+
+footer{
+    height: 70px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    background: rgb(245, 245, 245);
+    color: gray;
+    border-top: 3px solid rgb(245, 245, 245);  
+    text-align: center;  z-index: 1000;
+    overflow: hidden;
+}

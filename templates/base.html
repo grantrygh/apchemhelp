@@ -13,6 +13,7 @@
 
 <body>
 
+<div id="holder">
   <!--Header-->
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -24,6 +25,8 @@
       <a class="navbar-brand" href="/"><img src="{{ STATIC_URL }}img/logo2.png"></a>
     </div>  <!-- end container -->
   </div>  <!-- end navbar header -->
+
+  <div id="bod">
   <br><br>
     
   {% block content %}
@@ -47,5 +50,6 @@
 
   {% block lateStatic %}{% endblock lateStatic %}
 
+</div><!--/holder-->
 </body>  
 </html>
