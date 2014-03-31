@@ -3,15 +3,8 @@ import os
 
 # PROJECT_DIR is the repository root.
 up = os.path.dirname
-PROJECT_DIR = up(up(os.path.abspath(__file__)))
+PROJECT_DIR = up(up(up(os.path.abspath(__file__))))
 
-
-if os.getenv('LOCAL_DEVELOPMENT') != 'true':
-    import dj_database_url
-
-
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -19,25 +12,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-if os.getenv('LOCAL_DEVELOPMENT') == 'true':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': os.getenv('SQLITE_DB_PATH'),                      # Or path to database file if using sqlite3.
-            # The following settings are not used with sqlite3:
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-            'PORT': '',                      # Set to empty string for default.
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.config()
-    }
 
-# Hosts/domain names that are valid for this site; required if DEBUG is False
-# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
@@ -123,9 +98,6 @@ ROOT_URLCONF = 'apchemhelp.urls'
 WSGI_APPLICATION = 'apchemhelp.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_DIR, 'templates')
 )
 
@@ -142,8 +114,6 @@ INSTALLED_APPS = (
     'core',
     'flashcard',
     'formulas',
-
-
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -177,19 +147,6 @@ LOGGING = {
     }
 }
 
-
-
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.mandrillapp.com'
 EMAIL_PORT = 587
-
-
-##### [Amazon S3 CDN] #####
-if os.getenv("LOCAL_DEVELOPMENT") != 'true':
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
-    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-    AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
-    S3_URL = 'https://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-    STATIC_URL = S3_URL
