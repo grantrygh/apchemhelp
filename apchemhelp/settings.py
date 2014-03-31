@@ -10,7 +10,7 @@ if os.getenv('LOCAL_DEVELOPMENT') != 'true':
     import dj_database_url
 
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
